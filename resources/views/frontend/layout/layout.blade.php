@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0028)https://hongngochospital.vn/ -->
+<!-- saved from url=(0028)# -->
 <html lang="vi-VN">
   
   <head>
@@ -8,25 +8,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=no">
     <link rel="pingback" href="https://1web.vn/xmlrpc.php">
     <title>
-      Hồng Ngọc Hospital * Trang thông tin của Bệnh viện đa khoa Hồng Ngọc
+      Phụ sản Tina - Bác sĩ phòng khám bệnh viện Từ Dũ – Hùng Vương
     </title>
     <meta name="description" content="[+(84-24) 3927 5568 ext *0] Thăm khám và điều trị tại Bệnh viện Đa khoa Hồng Ngọc với trải nghiệm dịch vụ chăm sóc sức khỏe 5* cùng đội ngũ chuyên gia hàng đầu.">
     <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <link rel="canonical" href="https://hongngochospital.vn/">
+    <link rel="canonical" href="#">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Hồng Ngọc Hospital * Trang thông tin của Bệnh viện đa khoa Hồng Ngọc">
+    <meta property="og:title" content="Phụ sản Tina - Bác sĩ phòng khám bệnh viện Từ Dũ – Hùng Vương">
     <meta property="og:description" content="[+(84-24) 3927 5568 ext *0] Thăm khám và điều trị tại Bệnh viện Đa khoa Hồng Ngọc với trải nghiệm dịch vụ chăm sóc sức khỏe 5* cùng đội ngũ chuyên gia hàng đầu.">
-    <meta property="og:url" content="https://hongngochospital.vn/">
+    <meta property="og:url" content="#">
     <meta property="og:site_name" content="Hồng Ngọc Hospital">
-    <meta property="og:image" content="https://hongngochospital.vn/wp-content/uploads/2021/03/hong-ngoc-ptm.jpg")}}">
-    <meta property="og:image:secure_url" content="https://hongngochospital.vn/wp-content/uploads/2021/03/hong-ngoc-ptm.jpg")}}">
+    <meta property="og:image" content="{{asset("assets/images/hong-ngoc-ptm.jpg")}}">
+    <meta property="og:image:secure_url" content="{{asset("assets/images/hong-ngoc-ptm.jpg")}}">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="670">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="[+(84-24) 3927 5568 ext *0] Thăm khám và điều trị tại Bệnh viện Đa khoa Hồng Ngọc với trải nghiệm dịch vụ chăm sóc sức khỏe 5* cùng đội ngũ chuyên gia hàng đầu.">
-    <meta name="twitter:title" content="Hồng Ngọc Hospital * Trang thông tin của Bệnh viện đa khoa Hồng Ngọc">
-    <meta name="twitter:image" content="https://hongngochospital.vn/wp-content/uploads/2021/03/hong-ngoc-ptm.jpg")}}">
+    <meta name="twitter:title" content="Phụ sản Tina - Bác sĩ phòng khám bệnh viện Từ Dũ – Hùng Vương">
+    <meta name="twitter:image" content="{{asset("assets/images/hong-ngoc-ptm.jpg")}}">
     <link rel="shortcut icon" href="{{asset("assets/logo.png")}}")}}"
     type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{asset("assets/css/bootstrap.min.css")}}">
@@ -90,24 +90,24 @@
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2289033084483593&ev=PageView&noscript=1"
       />
     </noscript>
-    <link rel="stylesheet" type="text/css" href="{{asset("assets/all.css")}}">
+    <link rel="stylesheet" type="text/css" href="{{asset("assets/css//all.css")}}">
     <style type="text/css")}}">
       .navbar{padding:0;align-items:flex-end!important;margin-top:-40px}.sticky
       .navbar{align-items:center!important}.wrap-menu{padding:10px 0}.navbar-brand{padding-bottom:10px}.main-menu>li{position:relative;padding:10px
-      0}.main-menu li.current-menu-item a{color:#00BB6D}.main-menu li.current-menu-parent
-      a{color:#00BB6D}.main-menu .sub-menu{position:absolute;top:40px;left:0;width:300px;background:#fff;border-top:2px
-      solid #00BB6D;list-style:none;padding-left:0;visibility:hidden;transition:all
+      0}.main-menu li.current-menu-item a{color:#ef4566}.main-menu li.current-menu-parent
+      a{color:#ef4566}.main-menu .sub-menu{position:absolute;top:40px;left:0;width:300px;background:#fff;border-top:2px
+      solid #ef4566;list-style:none;padding-left:0;visibility:hidden;transition:all
       0.3s ease;opacity:0}.main-menu>li:hover .sub-menu{opacity:1;visibility:visible;z-index:10}.main-menu>li.mega
       .sub-menu{width:800px}.main-menu>li.mega .sub-menu{display:flex;flex-wrap:wrap}.main-menu>li.mega
       .sub-menu li{width:33.3333%;border-bottom:1px solid #f0f0f0;border-left:1px
       solid #f0f0f0}.main-menu>li .sub-menu li{border-bottom:1px solid #f0f0f0}.main-menu>li>a{padding:5px
-      15px;border-right:1px solid #00BB6D}.main-menu>li:last-child>a{border-right:none}.wrap-menu
+      15px;border-right:1px solid #ef4566}.main-menu>li:last-child>a{border-right:none}.wrap-menu
       #navbarSupportedContent{justify-content:flex-end}.main-menu .sub-menu li
       a{display:block;padding:12px 17px;color:#2F4857;font-size:14px}.main-menu
       .sub-menu li:nth-child(3){border-right:1px solid #f0f0f0}.main-menu .sub-menu
       li:nth-child(6){border-right:1px solid #f0f0f0}.main-menu .sub-menu li:nth-child(9){border-right:1px
       solid #f0f0f0}.main-menu .sub-menu li:nth-child(12){border-right:1px solid
-      #f0f0f0}.main-menu .sub-menu li a:hover{background:#00BB6D;color:#fff!important;border-color:#00BB6D}
+      #f0f0f0}.main-menu .sub-menu li a:hover{background:#ef4566;color:#fff!important;border-color:#ef4566}
     </style>
     <meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9">
     <script type="text/javascript" async="" src="{{asset("assets/f.txt")}}">
@@ -117,7 +117,7 @@
         "@context": "http://schema.org",
         "@type": "LocalBusiness",
         "name": "Bệnh viên đa khoa Hồng Ngọc",
-        "image": "https://hongngochospital.vn/wp-content/themes/flexible/{{asset("assets/images/logo-menu.jpg")}}",
+        "image": "#wp-content/themes/flexible/{{asset("assets/images/logo-menu.jpg")}}",
         "@id": "hongngochospital.vn",
         "url": "https://hongngochospital.vn",
         "telephone": "024 3927 5568",
@@ -770,7 +770,7 @@
             "@context": "http://schema.org",
             "@type": "LocalBusiness",
             name: "B\u1ec7nh vi\u00ean \u0111a khoa H\u1ed3ng Ng\u1ecdc",
-            image: "https://hongngochospital.vn/wp-content/themes/flexible/{{asset("assets/images/logo-menu.jpg")}}",
+            image: "#wp-content/themes/flexible/{{asset("assets/images/logo-menu.jpg")}}",
             "@id": "hongngochospital.vn",
             url: "https://hongngochospital.vn",
             telephone: "024 3927 5568",

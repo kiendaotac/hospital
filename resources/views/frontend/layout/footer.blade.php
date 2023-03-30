@@ -1,17 +1,17 @@
 <footer class="footer border-none">
         <div class="container">
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-md-4">
               <div>
-                <a href="https://hongngochospital.vn/">
-                  <img src="{{asset("assets/images/logo.png")}}"
+                <a href="#">
+                  <img src="{{asset("assets/images/logo.png")}}" width="100px"
                   class="logo-footer d-block">
                 </a>
               </div>
-              <p class="fs15 text-uppercase b600 mt-2 mb-2">
-                CÔNG TY TNHH BỆNH VIỆN HỒNG NGỌC
+              <p class="fs15  b600 mt-2 mb-2">
+              Phòng khám sản phụ khoa Tina còn được trang bị hệ thống máy móc hiện đại như máy siêu âm, máy chụp X-quang, máy điện tim và các thiết bị khác giúp cho việc chẩn đoán và điều trị các bệnh lý phụ khoa được dễ dàng và chính xác hơn.
               </p>
-              <div style="border-bottom: 1px solid #2F4857;" class="pb-3">
+              <!-- <div style="border-bottom: 1px solid #2F4857;" class="pb-3">
                 <div class="mb-1 d-flex">
                   <div>
                     <img src="{{asset("assets/images/icon-16.svg")}}">
@@ -44,29 +44,34 @@
                 <div class="menu-footer-menu-container">
                   <ul id="menu-footer-menu" class="footer-menu">
                     <li id="menu-item-1340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1340">
-                      <a href="https://hongngochospital.vn/tuyen-dung/">
+                      <a href="#tuyen-dung/">
                         Tuyển dụng
                       </a>
                     </li>
                     <li id="menu-item-1341" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1341">
-                      <a href="https://hongngochospital.vn/tu-van-suc-khoe/">
+                      <a href="#tu-van-suc-khoe/">
                         Tư vấn sức khỏe
                       </a>
                     </li>
                     <li id="menu-item-84591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84591">
-                      <a href="https://hongngochospital.vn/chinhsachbaomat/">
+                      <a href="#chinhsachbaomat/">
                         Chính sách quyền riêng tư
                       </a>
                     </li>
                   </ul>
                 </div>
-              </div>
-            </div>
-            <div class="col-md-8">
+              </div> -->
+            <!-- </div>
+            <div class="col-md-4">
+Địa chỉ: 100 Lê Quang Định, P10, Q Bình Thạnh, TP Hồ chí Minh
+Hotline: 091 5451313 -->
+<!-- 
+            </div> --> 
+            <!-- <div class="col-md-8">
               <div class="row">
                 <div class="col-md-6">
                   <p class="fs15 text-uppercase b600 mt-2 mb-2">
-                    <a href="https://hongngochospital.vn/">
+                    <a href="#">
                       BỆNH VIỆN ĐA KHOA HỒNG NGỌC
                     </a>
                   </p>
@@ -91,7 +96,7 @@
                 </div>
                 <div class="col-md-6">
                   <p class="fs15 text-uppercase b600 mt-2 mb-2">
-                    <a href="https://hongngochospital.vn/phong-kham-hong-ngoc-savico/">
+                    <a href="#phong-kham-hong-ngoc-savico/">
                       PHÒNG KHÁM ĐA KHOA HỒNG NGỌC SAVICO
                     </a>
                   </p>
@@ -117,7 +122,7 @@
                 </div>
                 <div class="col-md-6">
                   <p class="fs15 text-uppercase b600 mt-2 mb-2">
-                    <a href="https://hongngochospital.vn/phong-kham-da-khoa-hong-ngoc-nguyen-tuan/">
+                    <a href="#phong-kham-da-khoa-hong-ngoc-nguyen-tuan/">
                       PHÒNG KHÁM ĐA KHOA HỒNG NGỌC NGUYỄN TUÂN
                     </a>
                   </p>
@@ -142,7 +147,7 @@
                 </div>
                 <div class="col-md-6">
                   <p class="fs15 text-uppercase b600 mt-2 mb-2">
-                    <a href="https://hongngochospital.vn/phong-kham-hong-ngoc-to-huu/">
+                    <a href="#phong-kham-hong-ngoc-to-huu/">
                       PHÒNG KHÁM ĐA KHOA HỒNG NGỌC TỐ HỮU
                     </a>
                   </p>
@@ -167,7 +172,7 @@
                 </div>
                 <div class="col-md-6">
                   <p class="fs15 text-uppercase b600 mt-2 mb-2">
-                    <a href="https://hongngochospital.vn/phong-kham-hong-ngoc-keangnam/">
+                    <a href="#phong-kham-hong-ngoc-keangnam/">
                       PHÒNG KHÁM ĐA KHOA HỒNG NGỌC KEANGNAM
                     </a>
                   </p>
@@ -192,7 +197,7 @@
                 </div>
                 <div class="col-md-6">
                   <p class="fs15 text-uppercase b600 mt-2 mb-2">
-                    <a href="https://hongngochospital.vn/tung-bung-khai-truong-phong-kham-da-khoa-kosmo-tay-ho/">
+                    <a href="#tung-bung-khai-truong-phong-kham-da-khoa-kosmo-tay-ho/">
                       PHÒNG KHÁM ĐA KHOA HỒNG NGỌC TÂY HỒ
                     </a>
                   </p>
@@ -221,44 +226,44 @@
               <div class="menu-footer-menu-container">
                 <ul id="menu-footer-menu-1" class="footer-menu">
                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1340">
-                    <a href="https://hongngochospital.vn/tuyen-dung/">
+                    <a href="#tuyen-dung/">
                       Tuyển dụng
                     </a>
                   </li>
                   <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1341">
-                    <a href="https://hongngochospital.vn/tu-van-suc-khoe/">
+                    <a href="#tu-van-suc-khoe/">
                       Tư vấn sức khỏe
                     </a>
                   </li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84591">
-                    <a href="https://hongngochospital.vn/chinhsachbaomat/">
+                    <a href="#chinhsachbaomat/">
                       Chính sách quyền riêng tư
                     </a>
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="social-footer">
-            <a href="https://hongngochospital.vn/#">
+            <a href="##">
               <img src="{{asset("assets/images/fb.svg")}}"
               alt="">
             </a>
-            <a href="https://hongngochospital.vn/#">
+            <a href="##">
               <img src="{{asset("assets/images/twiter.svg")}}"
               alt="">
             </a>
-            <a href="https://hongngochospital.vn/#">
+            <a href="##">
               <img src="{{asset("assets/images/LinkedIN.svg")}}"
               alt="">
             </a>
-            <a href="https://hongngochospital.vn/#">
+            <a href="##">
               <img src="{{asset("assets/images/instagram.svg")}}"
               alt="">
             </a>
           </div>
         </div>
-        <div class="text-center text-white text-uppercase copy-right" style="padding: 15px 0px; background-color: #00BB6D;">
+        <div class="text-center text-white text-uppercase copy-right" style="padding: 15px 0px; background-color: #ef4566;">
         </div>
         <div class="nav-right">
           <img src="{{asset("assets/images/icon-19.svg")}}">
