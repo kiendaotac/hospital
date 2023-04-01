@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Forntend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Stephenjude\FilamentBlog\Models\Post;
 
 class HomeController extends Controller
 {
@@ -12,7 +13,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.home');
+        $posts = Post::published()->get();
+        return view('frontend.home', compact('posts'));
     }
     public function dangky(){
         return view('frontend.dangky');

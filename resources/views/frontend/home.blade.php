@@ -454,114 +454,26 @@
         </ul>
         <div id="tab-1" class="tab-content current">
             <div class="row mt-4">
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a
-                            href="">
-                            <img data-src="{{asset("assets/images/tiem-con-diet-hach-gasser-540x300.jpg" )}}"
-                                class="img-zoom lazy"
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+                @foreach($posts as $post)
+                    <div class="col-md-4 mb-4">
+                        <div class="ovh">
+                            <a
+                                    href="{!! $post->slug; !!}">
+                                <img data-src="{{asset($post->banner_url)}}"
+                                     class="img-zoom lazy"
+                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
+                            </a>
+                        </div>
+                        <a href="">
+                            <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
+                                {{ $post->title }}
+                            </p>
                         </a>
-                    </div>
-                    <a href="">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Tiêm cồn diệt hạch Gasser – Chấm dứt 10 năm đau dây thần kinh số 5 cho
-                            bệnh nhân 75 tuổi
+                        <p class="fs14 text-justify">
+                            {{ $post->excerpt }}
                         </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Chỉ sau 20 phút thực hiện tiêm cồn diệt hạch Gasser, những cơn đau gần
-                        như mất hoàn toàn. Sau một đêm ngủ ngon, ông Đ.D.Sứ đã có thể ăn...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#goi-tiem-chung-tai-hong-ngoc/">
-                            <img data-src="{{asset("assets/images/350x194-px.jpg" )}}" class="img-zoom lazy"
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-                        </a>
                     </div>
-                    <a href="#goi-tiem-chung-tai-hong-ngoc/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Toàn bộ các gói tiêm chủng tại Bệnh Viện Hồng Ngọc
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Tiêm vắc-xin đầy đủ và đúng lịch là biện pháp hiệu quả nhất giúp cơ thể
-                        sinh ra miễn dịch chủ động đặc hiệu, từ đó tăng cường sức đề...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#kham-phu-khoa-cung-bac-si-hong-ngoc/">
-                            <img data-src="{{asset("assets/images/0ac56ca74ecc9392cadd-540x300.jpg" )}}"
-                                class="img-zoom lazy"
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-                        </a>
-                    </div>
-                    <a href="#kham-phu-khoa-cung-bac-si-hong-ngoc/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Khám phụ khoa cùng bác sĩ Hồng Ngọc
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Theo thống kê của Bộ Y tế, tỉ lệ mắc bệnh viêm nhiễm phụ khoa ở phụ nữ
-                        Việt Nam lên tới 90%, đây là con số báo động cảnh...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#uu-dai-tiem-chung-tron-goi/">
-                            <img data-src="{{asset("assets/images/tablet-le-tan-2-540x300.jpg" )}}"
-                                class="img-zoom lazy"
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-                        </a>
-                    </div>
-                    <a href="#uu-dai-tiem-chung-tron-goi/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Bệnh viện Hồng Ngọc ưu đãi tiêm chủng trọn gói lên tới 2,5 triệu đồng
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Nhân dịp Quốc tế Phụ nữ 8/3, Trung tâm Tiêm chủng Hồng Ngọc xin dành tặng
-                        các mẹ những ưu đãi lên tới 2,5 triệu đồng khi đăng ký gói...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#uu-dai-thai-san-va-sinh-con-tron-goi/">
-                            <img data-src="{{asset("assets/images/Tablet-le-tan-1250x800-1.png" )}}"
-                                class="img-zoom lazy"
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-                        </a>
-                    </div>
-                    <a href="#uu-dai-thai-san-va-sinh-con-tron-goi/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            QUÀ TẶNG MẸ CON – ĐI SINH TRÒN VẸN ưu đãi tới 20 TRIỆU gói thai sản
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        BV Hồng Ngọc dành tặng ưu đãi thai sản hấp dẫn lên tới 20 triệu cho các
-                        mẹ bầu, mẹ không chỉ được trải nghiệm hành trình sinh con nhẹ...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#quan-he-ra-mau-nguoi-phu-nu-39-tuoi-phat-hien-ung-thu-co-tu-cung/">
-                            <img data-src="{{asset("assets/images/132.png" )}}" class="img-zoom lazy"
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-                        </a>
-                    </div>
-                    <a href="#quan-he-ra-mau-nguoi-phu-nu-39-tuoi-phat-hien-ung-thu-co-tu-cung/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Quan hệ ra máu, người phụ nữ 39 tuổi phát hiện ung thư cổ tử cung
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Bệnh viện Hồng Ngọc vừa phẫu thuật thành công một ca ung thư cổ tử cung
-                        cho bệnh nhân 39 tuổi. Căn bệnh này có triệu chứng thường gặp là...
-                    </p>
-                </div>
+                @endforeach
             </div>
         </div>
         <div id="tab-333" class="tab-content ">
