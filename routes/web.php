@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::middleware('guest')->namespace('Frontend')->name('frontend')->group(function (){
-    Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('dangky', [HomeController::class, 'dangky'])->name('dangky');
 });
