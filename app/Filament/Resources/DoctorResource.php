@@ -3,9 +3,9 @@
 namespace App\Filament\Resources;
 
 use App\Enums\StatusEnum;
-use App\Filament\Resources\HospitalResource\Pages;
-use App\Filament\Resources\HospitalResource\RelationManagers;
-use App\Models\Hospital;
+use App\Filament\Resources\DoctorResource\Pages;
+use App\Filament\Resources\DoctorResource\RelationManagers;
+use App\Models\Doctor;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -14,12 +14,12 @@ use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class HospitalResource extends Resource
+class DoctorResource extends Resource
 {
-    protected static ?string $model = Hospital::class;
+    protected static ?string $model = Doctor::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
-    protected static ?string $navigationLabel = 'Quản lý bệnh viện';
+    protected static ?string $navigationLabel = 'Quản lý bác sỹ';
 
 
     public static function form(Form $form): Form
@@ -63,9 +63,9 @@ class HospitalResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListHospitals::route('/'),
-            'create' => Pages\CreateHospital::route('/create'),
-            'edit' => Pages\EditHospital::route('/{record}/edit'),
+            'index' => Pages\ListDoctors::route('/'),
+            'create' => Pages\CreateDoctor::route('/create'),
+            'edit' => Pages\EditDoctor::route('/{record}/edit'),
         ];
     }    
 }
