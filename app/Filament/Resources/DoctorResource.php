@@ -26,16 +26,16 @@ class DoctorResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name'),
-                Forms\Components\FileUpload::make('avatar'),
-                Forms\Components\TextInput::make('title'),
-                Forms\Components\TextInput::make('specialist'),
-                Forms\Components\Textarea::make('education'),
-                Forms\Components\Textarea::make('activity'),
-                Forms\Components\Textarea::make('research'),
-                Forms\Components\Textarea::make('address'),
-                Forms\Components\TextInput::make('phone')->numeric(),
-                Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->name)
+                Forms\Components\TextInput::make('name')->label('Họ tên'),
+                Forms\Components\FileUpload::make('avatar')->label('Ảnh đại diện'),
+                Forms\Components\TextInput::make('title')->label('Chức vụ'),
+                Forms\Components\TextInput::make('specialist')->label('Chuyên ngành'),
+                Forms\Components\Textarea::make('education')->label('Học vấn'),
+                Forms\Components\Textarea::make('activity')->name('Hoạt động'),
+                Forms\Components\Textarea::make('research')->label('Nghiên cứu'),
+                Forms\Components\Textarea::make('address')->label('Địa chỉ'),
+                Forms\Components\TextInput::make('phone')->numeric()->label('Số điện thoại'),
+                Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->name)->label('Trạng thái')
             ]);
     }
 
@@ -43,16 +43,16 @@ class DoctorResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\ImageColumn::make('avatar'),
-                Tables\Columns\TextColumn::make('title'),
-                Tables\Columns\TextColumn::make('specialist'),
-                Tables\Columns\TextColumn::make('education')->limit(40),
-                Tables\Columns\TextColumn::make('activity')->limit(40),
-                Tables\Columns\TextColumn::make('research')->limit(40),
-                Tables\Columns\TextColumn::make('address'),
-                Tables\Columns\TextColumn::make('phone'),
-                Tables\Columns\TextColumn::make('status'),
+                Tables\Columns\TextColumn::make('name')->label('Họ tên'),
+                Tables\Columns\ImageColumn::make('avatar')->label('Ảnh đại diện'),
+                Tables\Columns\TextColumn::make('title')->label('Chức vụ'),
+                Tables\Columns\TextColumn::make('specialist')->label('Chuyên ngành'),
+                Tables\Columns\TextColumn::make('education')->limit(40)->label('Học vấn'),
+                Tables\Columns\TextColumn::make('activity')->limit(40)->name('Hoạt động'),
+                Tables\Columns\TextColumn::make('research')->limit(40)->label('Nghiên cứu'),
+                Tables\Columns\TextColumn::make('address')->label('Địa chỉ'),
+                Tables\Columns\TextColumn::make('phone')->label('Số điện thoại'),
+                Tables\Columns\TextColumn::make('status')->label('Trạng thái')
             ])
             ->filters([
                 //
