@@ -271,7 +271,7 @@ Hotline: 091 5451313 -->
             <p class="">
               <img src="{{asset("assets/images/icon-2.svg")}}">
               <span class="b500 ls1 text-white pl-2">
-                024 7300 8866
+                0915 45 13 13
               </span>
             </p>
           </div>
@@ -281,8 +281,7 @@ Hotline: 091 5451313 -->
               <span class="b500 ls1 text-white pl-2">
                 <a href="mailto:%C4%90%E1%BB%8Ba%20ch%E1%BB%89%20tr%E1%BB%A5%20s%E1%BB%9F:%20S%E1%BB%91%2055%20Ph%E1%BB%91%20Y%C3%AAn%20Ninh%20Ph%C6%B0%E1%BB%9Dng%20Tr%C3%BAc%20B%E1%BA%A1ch%20qu%E1%BA%ADn%20Ba%20%C4%90%C3%ACnh%20TP%20H%C3%A0%20N%E1%BB%99i"
                 class="cwhite">
-                  Địa chỉ trụ sở: Số 55 Phố Yên Ninh Phường Trúc Bạch quận Ba Đình TP Hà
-                  Nội
+                100 Lê Quang Định, P10, Q Bình Thạnh, TP Hồ chí Minh
                 </a>
               </span>
             </p>

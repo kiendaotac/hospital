@@ -201,25 +201,25 @@ img {
 	}
 }
 body.home .wrap-banner .owl-prev{
-	background-image: url('images/icon-left.png');
+	background-image: url('../images/icon-left.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 10px;
 }
 body.home .wrap-banner .owl-next{
-	background-image: url('images/icon-right.png');
+	background-image: url('../images/icon-right.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 10px;
 }
 body.home .wrap-dichvu .owl-prev{
-	background-image: url('images/icon-left.png');
+	background-image: url('../images/icon-left.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 10px;
 }
 body.home .wrap-dichvu .owl-next{
-	background-image: url('images/icon-right.png');
+	background-image:'' ;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 10px;
@@ -1533,13 +1533,13 @@ body.page-template-faqs .card .card-header{
 	padding: 0px;
 }
 body.category .pagination a.next{
-	background-image: url(images/icon-right.png) !important;
+	background-image: url(../images/icon-right.png) !important;
     background-size: 5px !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
 }
 body.category .pagination a.prev{
-	background-image: url(images/icon-left.png) !important;
+	background-image: url(../images/icon-left.png) !important;
     background-size: 5px !important;
     background-repeat: no-repeat !important;
     background-position: center !important;

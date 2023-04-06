@@ -47,7 +47,7 @@
         <div class="wrap-menu">
           <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="{{route('home')}}">
                 <img src="{{asset("assets/images/logo.png")}}"  width="104px" 
                 class="logo-top">
               </a>
@@ -188,45 +188,9 @@
                         Đội ngũ bác sĩ
                       </a>
                     </li>
-                    <li id="menu-item-1111" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1111">
-                      <a href="#tu-van-suc-khoe/">
-                        Tư vấn sức khỏe
-                      </a>
-                      <!-- <ul class="sub-menu">
-                        <li id="menu-item-31862" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31862">
-                          <a href="#tu-van-suc-khoe/song-khoe/">
-                            Sống khỏe
-                          </a>
-                        </li>
-                        <li id="menu-item-31864" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-31864">
-                          <a href="#tu-van-suc-khoe/cau-chuyen-khach-hang/">
-                            Câu chuyện khách hàng
-                          </a>
-                        </li>
-                        <li id="menu-item-31863" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31863">
-                          <a href="#benh-hoc/">
-                            Bệnh học A – Z
-                          </a>
-                        </li>
-                        <li id="menu-item-31867" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31867">
-                          <a href="#tu-dien-co-the/">
-                            Từ điển cơ thể
-                          </a>
-                        </li>
-                        <li id="menu-item-66516" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-66516">
-                          <a href="#covid-19/?utm_source=Ref&amp;utm_medium=Organic&amp;utm_campaign=Ncov2021&amp;utm_term=1&amp;utm_content=Home">
-                            Toàn tập Covid-19
-                          </a>
-                        </li>
-                        <li id="menu-item-70034" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70034">
-                          <a href="#nuoi-con-bang-sua-me/">
-                            Cẩm nang nuôi con bằng sữa mẹ
-                          </a>
-                        </li>
-                      </ul> -->
-                    </li>
+       
                     <li id="menu-item-1106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1106">
-                      <a href="#tin-tuc-va-uu-dai/">
+                      <a href="blog">
                         Tin tức và ưu đãi
                       </a>
                       <!-- <ul class="sub-menu">

@@ -19,6 +19,15 @@ class HomeController extends Controller
     public function dangky(){
         return view('frontend.dangky');
     }
+    public function blogs(){
+        $blogs = Post::published()->get();
+        return view('frontend.blog', compact('blogs'));
+    }
+    public function post($slug){
+
+        $post = Post::where('slug',$slug)->first();
+        return view('frontend.post_detail', compact('post'));
+    }
 
     /**
      * Show the form for creating a new resource.

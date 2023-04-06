@@ -10,28 +10,23 @@
     <title>
       Phụ sản Tina - Bác sĩ phòng khám bệnh viện Từ Dũ – Hùng Vương
     </title>
-    <meta name="description" content="[+(84-24) 3927 5568 ext *0] Thăm khám và điều trị tại Bệnh viện Đa khoa Hồng Ngọc với trải nghiệm dịch vụ chăm sóc sức khỏe 5* cùng đội ngũ chuyên gia hàng đầu.">
+    <meta name="description" content="Thăm khám và điều trị tại Phụ sản Tina với trải nghiệm dịch vụ chăm sóc sức khỏe 5* cùng đội ngũ chuyên gia hàng đầu.">
     <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="#">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Phụ sản Tina - Bác sĩ phòng khám bệnh viện Từ Dũ – Hùng Vương">
-    <meta property="og:description" content="[+(84-24) 3927 5568 ext *0] Thăm khám và điều trị tại Bệnh viện Đa khoa Hồng Ngọc với trải nghiệm dịch vụ chăm sóc sức khỏe 5* cùng đội ngũ chuyên gia hàng đầu.">
+    <meta property="og:description" content="Thăm khám và điều trị tại Phụ sản Tina với trải nghiệm dịch vụ chăm sóc sức khỏe 5* cùng đội ngũ chuyên gia hàng đầu.">
     <meta property="og:url" content="#">
-    <meta property="og:site_name" content="Hồng Ngọc Hospital">
+    <meta property="og:site_name" content="Phụ sản Tina">
     <meta property="og:image" content="{{asset("assets/images/hong-ngoc-ptm.jpg")}}">
     <meta property="og:image:secure_url" content="{{asset("assets/images/hong-ngoc-ptm.jpg")}}">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="670">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="[+(84-24) 3927 5568 ext *0] Thăm khám và điều trị tại Bệnh viện Đa khoa Hồng Ngọc với trải nghiệm dịch vụ chăm sóc sức khỏe 5* cùng đội ngũ chuyên gia hàng đầu.">
-    <meta name="twitter:title" content="Phụ sản Tina - Bác sĩ phòng khám bệnh viện Từ Dũ – Hùng Vương">
-    <meta name="twitter:image" content="{{asset("assets/images/hong-ngoc-ptm.jpg")}}">
     <link rel="shortcut icon" href="{{asset("assets/logo.png")}}")}}"
     type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{asset("assets/css/bootstrap.min.css")}}">
     <link rel="stylesheet" type="text/css" href="{{asset("assets/css/reset.css")}}">
-    <link rel="stylesheet" type="text/css" href="{{asset("assets/css/style.css")}}">
     <meta property="fb:app_id" content="2485018868423192">
     <meta property="fb:admins" content="100005704482438">
     <meta property="fb:admins" content="100001344710439">
@@ -50,6 +45,8 @@
     </script>
     <script async="" src="{{asset("assets/js/gtm.js")}}">
     </script>
+     <!-- <script async="" src="{{asset("assets/js/fontawesome.min.js")}}">
+    </script> -->
     <script>
       (function(w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -90,7 +87,10 @@
       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2289033084483593&ev=PageView&noscript=1"
       />
     </noscript>
-    <link rel="stylesheet" type="text/css" href="{{asset("assets/css//all.css")}}">
+    <link rel="stylesheet" type="text/css" href="{{asset("assets/css/all.css")}}">
+
+    <!-- <link rel="stylesheet" type="text/css" href="{{asset("assets/css/fontawesome.min.css")}}"> -->
+
     <style type="text/css")}}">
       .navbar{padding:0;align-items:flex-end!important;margin-top:-40px}.sticky
       .navbar{align-items:center!important}.wrap-menu{padding:10px 0}.navbar-brand{padding-bottom:10px}.main-menu>li{position:relative;padding:10px
@@ -199,7 +199,7 @@
         @include('frontend.layout.footer')
       
     </div>
-    <a href="https://m.me/BenhvienHongNgoc" target="_blank">
+    <a href="" target="_blank">
       <img src="{{asset("assets/images/icon-chat.png")}}"
       class="icon-chat-facebook">
     </a>
@@ -227,7 +227,7 @@
           autoplay: true,
           autoHeight: false,
           lazyLoad: false,
-          navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+          navText: ['', ''],
           dots: true,
           responsive: {
             0 : {
@@ -250,7 +250,7 @@
           lazyLoad: true,
           autoHeight: true,
           smartSpeed: 500,
-          navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
+          navText: ['', '']
         });
 
         $('.list-partner').owlCarousel({
@@ -259,7 +259,7 @@
           dots: false,
           margin: 10,
           lazyLoad: true,
-          navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+          navText: ['', ''],
           responsive: {
             0 : {
               items: 2
@@ -349,6 +349,8 @@
         });
       })
     </script>
+        <link rel="stylesheet" type="text/css" href="{{asset("assets/css/style.css")}}">
+
     <!-- This website is like a Rocket, isn't it? Performance optimized by
     WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1679713348
     -->

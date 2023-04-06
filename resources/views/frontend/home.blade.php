@@ -3,14 +3,14 @@
 <div class="wrap-banner loop owl-carousel owl-theme owl-loaded owl-drag">
 
     <a>
-        <img src="{{asset("assets/images/banner-web-1.jpg")}}" alt="">
+        <img src="{{asset("assets/images/banner.png")}}" alt="">
     </a>
-    <a>
+    <!-- <a>
         <img src="{{asset("assets/images/e3b26251542f9371ca3e-scaled.jpg")}}" alt="">
     </a>
     <a>
         <img src="{{asset("assets/images/BVHN-nuoi-con-bang-sua-me.jpg")}}" alt="">
-    </a>
+    </a> -->
 
 </div>
 <div class="section-1">
@@ -400,7 +400,7 @@
                         cũng như toàn khu vực miền Nam.
                     </p>
                     <div class="d-flex wrap-doctor" style="align-items: flex-end;">
-                        <img style="max-width: 200px" src="{{asset("assets/images/1f1e57470c04f75aae15.jpg")}}">
+                        <img style="max-width: 200px" src="{{asset("assets/images/gs-nguyen-van-thang-6407.jpg")}}">
                         <div class="pl-3">
                             <div style="border-bottom: 1px solid #FFFFFF;">
                                 <p class="fs18 text-uppercase b600 text-white mb-0">
@@ -414,7 +414,7 @@
                                 <img src="{{asset("assets/images/icon-15.svg")}}">
                                 <p class="mb-0 pl-3 text-white text-justify">
                                     Với đội ngũ bác sĩ giỏi chuyên môn, liên tục cập nhật những phương pháp
-                                    điều trị hiện đại, Bệnh viện Hồng Ngọc luôn không ngừng phấn đấu để khẳng
+                                    điều trị hiện đại, Phòng khám Tina luôn không ngừng phấn đấu để khẳng
                                     định sứ mệnh lớn lao mà mình theo đuổi bằng việc trở thành hệ thống y tế
                                     tư nhân hàng đầu Việt Nam.
                                 </p>
@@ -440,7 +440,7 @@
                 </a>
             </p>
         </div>
-        <ul class="tabs d-flex">
+        <!-- <ul class="tabs d-flex">
             <li class="tab-link" data-tab="tab-1">
                 Tin tức
             </li>
@@ -451,32 +451,33 @@
                 Thông tin ưu đãi
             </li>
          
-        </ul>
-        <div id="tab-1" class="tab-content current">
-            <div class="row mt-4">
-                @foreach($posts as $post)
-                    <div class="col-md-4 mb-4">
-                        <div class="ovh">
-                            <a
-                                    href="{!! $post->slug; !!}">
-                                <img data-src="{{asset($post->banner_url)}}"
-                                     class="img-zoom lazy"
-                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-                            </a>
-                        </div>
-                        <a href="">
-                            <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                                {{ $post->title }}
-                            </p>
+        </ul> -->
+        <div class="row mt-4">
+            @foreach($posts as $post    )
+                <div class="col-md-4 mb-4">
+                    <div class="ovh">
+                        <a
+                            href="{{route('post',$post->slug)}}">
+                            <img data-src="{{$post->banner_url}}"
+                                class="img-zoom lazy"
+                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
                         </a>
-                        <p class="fs14 text-justify">
-                            {{ $post->excerpt }}
-                        </p>
                     </div>
+                    <a href="{{route('post',$post->slug)}}">
+                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
+                          {{$post->title}}
+                        </p>
+                    </a>
+                    <p class="fs14 text-justify">
+                    {{$post->excerpt}}
+                    </p>
+                </div>
                 @endforeach
             </div>
-        </div>
-        <div id="tab-333" class="tab-content ">
+        <!-- <div id="tab-1" class="tab-content current">
+          
+        </div> -->
+        <!-- <div id="tab-333" class="tab-content ">
             <div class="row mt-4">
                 <div class="col-md-4 mb-4">
                     <div class="ovh">
@@ -698,7 +699,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <div class="clearfix">
@@ -737,9 +738,7 @@
 
     </div>
 </div>
-<div class="section-5">
-    <div class="overlay">
-    </div>
+<!-- <div class="section-5">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.7368039675343!2d106.69602761410545!3d10.805813561607053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528c733641dc7%3A0x9a19a1283a045554!2zMTAwIEzDqiBRdWFuZyDEkOG7i25oLCBQaMaw4budbmcgMTQsIELDrG5oIFRo4bqhbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1680010486522!5m2!1svi!2s" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+</div> -->
 @endsection
