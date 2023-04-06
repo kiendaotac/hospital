@@ -27,6 +27,12 @@ class DoctorResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('name'),
+                Forms\Components\FileUpload::make('avatar'),
+                Forms\Components\TextInput::make('title'),
+                Forms\Components\TextInput::make('specialist'),
+                Forms\Components\Textarea::make('education'),
+                Forms\Components\Textarea::make('activity'),
+                Forms\Components\Textarea::make('research'),
                 Forms\Components\Textarea::make('address'),
                 Forms\Components\TextInput::make('phone')->numeric(),
                 Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->name)
@@ -38,6 +44,12 @@ class DoctorResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\ImageColumn::make('avatar'),
+                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('specialist'),
+                Tables\Columns\TextColumn::make('education')->limit(40),
+                Tables\Columns\TextColumn::make('activity')->limit(40),
+                Tables\Columns\TextColumn::make('research')->limit(40),
                 Tables\Columns\TextColumn::make('address'),
                 Tables\Columns\TextColumn::make('phone'),
                 Tables\Columns\TextColumn::make('status'),

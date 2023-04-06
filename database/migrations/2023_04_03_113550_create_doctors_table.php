@@ -14,6 +14,12 @@ return new class extends Migration
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('avatar');
+            $table->string('title');
+            $table->string('specialist');
+            $table->text('education');
+            $table->text('activity');
+            $table->text('research');
             $table->string('address');
             $table->string('phone');
             $table->enum('status', \App\Enums\StatusEnum::toArray());
