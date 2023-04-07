@@ -36,6 +36,8 @@ class AppointmentResource extends Resource
                 ]),
                 Forms\Components\Textarea::make('address'),
                 Forms\Components\Textarea::make('note'),
+                Forms\Components\DateTimePicker::make('time'),
+                Forms\Components\TextInput::make('service'),
                 Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->name)
             ]);
     }
@@ -51,6 +53,8 @@ class AppointmentResource extends Resource
                 Tables\Columns\TextColumn::make('gender'),
                 Tables\Columns\TextColumn::make('address'),
                 Tables\Columns\TextColumn::make('note'),
+                Tables\Columns\TextColumn::make('time'),
+                Tables\Columns\TextColumn::make('service'),
                 Tables\Columns\TextColumn::make('status'),
             ])
             ->filters([

@@ -13,14 +13,16 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('phone');
+            $table->string('name')->nullable();
+            $table->string('phone')->nullable();
             $table->date('dob')->nullable();
             $table->string('email')->nullable();
             $table->boolean('gender')->default(false);
-            $table->string('address');
+            $table->string('address')->nullable();
+            $table->string('service')->nullable();
+            $table->dateTime('time')->nullable();
             $table->text('note')->nullable();
-            $table->enum('status', \App\Enums\StatusEnum::toArray());
+            $table->enum('status', \App\Enums\StatusEnum::toArray())->default(\App\Enums\StatusEnum::ACTIVE->value);
             $table->timestamps();
         });
     }
