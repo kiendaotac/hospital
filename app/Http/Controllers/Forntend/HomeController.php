@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Forntend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Stephenjude\FilamentBlog\Models\Post;
+use App\Models\Doctor;
+use Illuminate\Support\Str;
 
 class HomeController extends Controller
 {
@@ -24,11 +26,18 @@ class HomeController extends Controller
         return view('frontend.blog', compact('blogs'));
     }
     public function post($slug){
-
         $post = Post::where('slug',$slug)->first();
         return view('frontend.post_detail', compact('post'));
     }
 
+    public function doctors(){
+        $doctors = Doctor::all();
+        return view('frontend.doctor', compact('doctors'));
+    }
+    public function doctor_detail($id){
+        $doctor = Doctor::where('id',$id)->first();
+        return view('frontend.doctor_detail', compact('doctor'));
+    }
     /**
      * Show the form for creating a new resource.
      */

@@ -465,11 +465,11 @@
                     </div>
                     <a href="{{route('post',$post->slug)}}">
                         <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                          {{$post->title}}
+                        {{Str::limit($post->title, 79 , ' ...')}}
                         </p>
                     </a>
                     <p class="fs14 text-justify">
-                    {{$post->excerpt}}
+                    {{Str::limit($post->excerpt, 200 , ' ...')}}
                     </p>
                 </div>
                 @endforeach

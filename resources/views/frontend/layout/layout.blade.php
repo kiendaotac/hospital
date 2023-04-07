@@ -246,6 +246,7 @@
           items: 3,
           loop: true,
           nav: true,
+          dots: true,
           autoplay: false,
           lazyLoad: true,
           autoHeight: true,

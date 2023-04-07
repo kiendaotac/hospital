@@ -1,5 +1,8 @@
 @extends('frontend.layout.layout')
 @section('content')
+<div class="page-banner"> <img
+        src="{{asset("assets/images/banner.png")}}"
+        class="w-100"></div>
 <div class="container">
 <h1 class="page-title">Tin tức phụ sản Tina</h1>
     <div class="row">
@@ -13,7 +16,7 @@
                             href="{{route('post',$post->slug)}}">
                             {{$post->title}}</a></strong></h4>
                 <div class="excerpt text-justify">
-                    <p> {{$post->excerpt}}</p>
+                    <p> {{Str::limit($post->excerpt, 200 , ' ...')}} </p>
                 </div>
             </div>
         </div>
