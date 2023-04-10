@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Forntend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Appointment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Stephenjude\FilamentBlog\Models\Post;
 use App\Models\Doctor;
@@ -18,10 +20,15 @@ class HomeController extends Controller
         $posts = Post::published()->get();
         return view('frontend.home', compact('posts'));
     }
-    public function dangky(){
-        return view('frontend.dangky');
+    public function dangky(Request $request){
+        $phone = trim($request->telephone);
+        $appointment = Appointment::where('phone', $phone)->first();
+        return view('frontend.dangky', compact('appointment'));
     }
-    public function postdangky(){
+    public function postdangky(Request $request){
+        $params = $request->only(['name', 'phone', 'dob', 'service']);
+        $params['time'] = Carbon::parse($request->date_pick . ' ' . $request->time_pick);
+        Appointment::create($params);
         return redirect()->route('otp');
     }
     public function blogs(){
