@@ -21,6 +21,9 @@ class HomeController extends Controller
     public function dangky(){
         return view('frontend.dangky');
     }
+    public function postdangky(){
+        return redirect()->route('otp');
+    }
     public function blogs(){
         $blogs = Post::published()->get();
         return view('frontend.blog', compact('blogs'));
@@ -37,6 +40,14 @@ class HomeController extends Controller
     public function doctor_detail($id){
         $doctor = Doctor::where('id',$id)->first();
         return view('frontend.doctor_detail', compact('doctor'));
+    }
+    public function nhaptelephone(Request $request){
+        $telephone = $request->telephone;
+        return redirect()->route('dangky',  compact('telephone'));
+    }
+    public function otp(){
+        return view('frontend.otp');
+
     }
     /**
      * Show the form for creating a new resource.

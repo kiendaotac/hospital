@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('dangky', [HomeController::class, 'dangky'])->name('dangky');
+Route::post('dangky', [HomeController::class, 'postdangky'])->name('dangky');
+Route::get('nhaptelephone', [HomeController::class, 'nhaptelephone'])->name('nhaptelephone');
+Route::get('otp', [HomeController::class, 'otp'])->name('otp');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('blog', [HomeController::class, 'blogs'])->name('blog');
 Route::get('post/{slug}', [HomeController::class, 'post'])->name('post');

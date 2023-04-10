@@ -25,9 +25,7 @@
                 </span>
               </p>
               <div class="switch-lang">
-                <a href="http://en.hongngochospital.vn/">
-                  <img src="{{asset("assets/images/eng.jpg")}}">
-                </a>
+                  <a href="">Đằng nhập</a>
               </div>
             </div>
             <div class="search-form-wrapper">
@@ -647,8 +645,6 @@
           </div>
         </div>
         <div class="switch-lang-mobile">
-          <a href="http://en.hongngochospital.vn/">
-            <img src="{{asset("assets/images/eng.jpg")}}">
-          </a>
+       
         </div>
       </div>

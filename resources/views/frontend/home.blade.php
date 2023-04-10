@@ -117,14 +117,12 @@
                     </div>
                 </div>
             </div>
-            <div  class="item item-3">
-                <a href="dangky">
+            <div   data-toggle="modal" data-target="#exampleModal3" class="item item-4" >
                 <img class="normal" src="{{asset("assets/images/icon-5.svg")}}">
                 <img class="active" src="{{asset("assets/images/icon-5-active.svg")}}">
                 <span class="pl-3">
                     Đăng ký lịch khám
                 </span>
-</a>
             </div>
             <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -138,19 +136,12 @@
                                 Đăng ký lịch khám
                             </h2>
                             <div class="appointment-form-popup">
-                                <form action="#">
+                                <form action="{{route('nhaptelephone')}}">
                                     <div class="form-group">
-
-                                        <input style="Width:100%" type="text" name="name_doctor" value=""
+                                        <input style="Width:100%" type="number" name="telephone" value=""
                                             placeholder="Nhập Số điện thoại để đặt lịch">
                                     </div>
-                                    <div class="form-group">
-                                        <label for=""> Chọn theo Chuyên khoa </label>
-                                        <select name="park" id="">
-                                            <option value="">Chọn theo Chuyên khoa</option>
-                                            <option value="896">Khoa Chẩn đoán hình ảnh và Điện quang can thiệp</option>
-                                        </select>
-                                    </div>
+                     
                                     <button>
                                         Đặt lịch ngay
                                     </button>
