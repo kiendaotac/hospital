@@ -26,16 +26,16 @@ class DoctorResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')->label('Họ tên'),
-                Forms\Components\FileUpload::make('avatar')->label('Ảnh đại diện'),
-                Forms\Components\TextInput::make('title')->label('Chức vụ'),
-                Forms\Components\TextInput::make('specialist')->label('Chuyên ngành'),
-                Forms\Components\Textarea::make('education')->label('Học vấn'),
-                Forms\Components\Textarea::make('activity')->name('Hoạt động'),
-                Forms\Components\Textarea::make('research')->label('Nghiên cứu'),
-                Forms\Components\Textarea::make('address')->label('Địa chỉ'),
-                Forms\Components\TextInput::make('phone')->numeric()->label('Số điện thoại'),
-                Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->name)->label('Trạng thái')
+                Forms\Components\TextInput::make('name')->label('Họ tên')->required(),
+                Forms\Components\FileUpload::make('avatar')->label('Ảnh đại diện')->required(),
+                Forms\Components\TextInput::make('title')->label('Chức vụ')->required(),
+                Forms\Components\TextInput::make('specialist')->label('Chuyên ngành')->required(),
+                Forms\Components\Textarea::make('education')->label('Học vấn')->required(),
+                Forms\Components\Textarea::make('activity')->name('Hoạt động')->required(),
+                Forms\Components\Textarea::make('research')->label('Nghiên cứu')->required(),
+                Forms\Components\Textarea::make('address')->label('Địa chỉ')->required(),
+                Forms\Components\TextInput::make('phone')->numeric()->label('Số điện thoại')->required(),
+                Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->name)->label('Trạng thái')->required()
             ]);
     }
 
