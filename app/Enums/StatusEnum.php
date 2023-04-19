@@ -18,7 +18,7 @@ enum StatusEnum: string
     {
         $data = [];
         foreach (self::cases() as $item) {
-            $data[$item->name] = $item->value;
+            $data[$item->value] = $item->value;
         }
 
         return $data;
