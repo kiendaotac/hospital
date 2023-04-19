@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=no">
     <link rel="pingback" href="https://1web.vn/xmlrpc.php">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>
       Phụ sản Tina - Bác sĩ phòng khám bệnh viện Từ Dũ – Hùng Vương
     </title>
@@ -15,15 +18,15 @@
     <link rel="canonical" href="#">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Phụ sản Tina - Bác sĩ phòng khám bệnh viện Từ Dũ – Hùng Vương">
+    <meta property="og:title" content="Phụ sản Tina - Bác sĩ phòng khám bệnh viện Từ Dũ - Hùng Vương">
     <meta property="og:description" content="Thăm khám và điều trị tại Phụ sản Tina với trải nghiệm dịch vụ chăm sóc sức khỏe 5* cùng đội ngũ chuyên gia hàng đầu.">
     <meta property="og:url" content="#">
     <meta property="og:site_name" content="Phụ sản Tina">
-    <meta property="og:image" content="{{asset("assets/images/hong-ngoc-ptm.jpg")}}">
-    <meta property="og:image:secure_url" content="{{asset("assets/images/hong-ngoc-ptm.jpg")}}">
+    <meta property="og:image" content="{{asset("assets/images/logo-tina.png")}}">
+    <meta property="og:image:secure_url" content="{{asset("assets/images/logo-tina.png")}}">
     <meta property="og:image:width" content="1920">
     <meta property="og:image:height" content="670">
-    <link rel="shortcut icon" href="{{asset("assets/logo.png")}}")}}"
+    <link rel="shortcut icon" href="{{asset("assets/images/logo-tina.png")}}"
     type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="{{asset("assets/css/bootstrap.min.css")}}">
     <link rel="stylesheet" type="text/css" href="{{asset("assets/css/reset.css")}}">

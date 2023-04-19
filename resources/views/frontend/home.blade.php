@@ -5,13 +5,6 @@
     <a>
         <img src="{{asset("assets/images/banner.png")}}" alt="">
     </a>
-    <!-- <a>
-        <img src="{{asset("assets/images/e3b26251542f9371ca3e-scaled.jpg")}}" alt="">
-    </a>
-    <a>
-        <img src="{{asset("assets/images/BVHN-nuoi-con-bang-sua-me.jpg")}}" alt="">
-    </a> -->
-
 </div>
 <div class="section-1">
     <div class="container">
@@ -48,61 +41,7 @@
                                         24/7
                                     </span>
                                 </p>
-                                <!-- <p>
-                        <span class="text-left">
-                          Phòng khám Đa khoa Hồng Ngọc Keangnam
-                        </span>
-                        <span class="text-right">
-                          7h30 - 17h00
-                        </span>
-                      </p>
-                      <p>
-                        <span class="text-left">
-                          Phòng khám Đa khoa Hồng Ngọc Savico
-                        </span>
-                        <span class="text-right">
-                          7h00 - 18h00
-                        </span>
-                      </p>
-                      <p>
-                        <span class="text-left">
-                          Phòng khám Đa khoa Hồng Ngọc Nguyễn Tuân
-                        </span>
-                        <span class="text-right">
-                          8h00 - 18h00
-                        </span>
-                      </p>
-                      <p>
-                        <span class="text-left">
-                          Phòng khám Đa khoa Hồng Ngọc Tố Hữu
-                        </span>
-                        <span class="text-right">
-                          8h00 - 18h00
-                        </span>
-                      </p>
-                      <p>
-                        <span class="text-left">
-                          Phòng khám Đa khoa Hồng Ngọc Tây Hồ
-                        </span>
-                        <span class="text-right">
-                          8h00 - 18h00
-                        </span>
-                      </p>
-                      <p>
-                        <span class="text-left">
-                          Cấp cứu 24/24
-                        </span>
-                        <span class="text-right">
-                        </span>
-                      </p>
-                      <p>
-                        <span class="text-left">
-                          Lưu ý: Giờ làm việc hành chính từ 6h30 -17h00. Ngoài giờ hành chính giá
-                          dịch vụ sẽ tăng 20%
-                        </span>
-                        <span class="text-right">
-                        </span>
-                      </p> -->
+                                
                                 <div class="contact">
                                     <a href="tel: (+84)2473008866">
                                         <img src="{{asset("assets/images/phone.png")}}">
@@ -325,7 +264,7 @@
                 </h2>
                 <div class="blog-1">
                     <div class="d1 d-flex aic">
-                        <div class="d-flex" style="margin-l\eft: 35px;">
+                        <div class="d-flex" style="margin-left: 35px;">
                             <img src="{{asset("assets/images/icon-10.svg")}}">
                             <div class="pl-3">
                                 <p class="fs30 b600 text-white mb-0 funfacts" id="num1" style="line-height: 45px;"
@@ -422,27 +361,15 @@
 <div class="section-4">
     <div class="container">
         <div class="d-flex jcs aic pb-2 w-100" style="border-bottom: 1px solid #2F4857;">
-            <p class="fs36 b600 text-uppercase ls2 mb-0">
+            <h2 class="fs36 b600 text-uppercase ls2 mb-0">
                 tin tức hoạt động
-            </p>
+</h2>
             <p class="mb-0">
                 <a class="more" href="#tin-tuc-va-uu-dai/">
                     Xem thêm
                 </a>
             </p>
         </div>
-        <!-- <ul class="tabs d-flex">
-            <li class="tab-link" data-tab="tab-1">
-                Tin tức
-            </li>
-            <li class="tab-link" data-tab="tab-333">
-                Hoạt động của Hồng Ngọc
-            </li>
-            <li class="tab-link" data-tab="tab-331">
-                Thông tin ưu đãi
-            </li>
-         
-        </ul> -->
         <div class="row mt-4">
             @foreach($posts as $post    )
                 <div class="col-md-4 mb-4">
@@ -465,232 +392,7 @@
                 </div>
                 @endforeach
             </div>
-        <!-- <div id="tab-1" class="tab-content current">
-          
-        </div> -->
-        <!-- <div id="tab-333" class="tab-content ">
-            <div class="row mt-4">
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#khoa-xet-nghiem-bvdk-hong-ngoc-phuc-truong-minh-dat-chung-chi-iso-151892012/">
-                            <img class="img-zoom lazy" src="{{asset("assets/chung-chi-iso-4-540x300.jpg")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#khoa-xet-nghiem-bvdk-hong-ngoc-phuc-truong-minh-dat-chung-chi-iso-151892012/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Khoa Xét nghiệm BVĐK Hồng Ngọc Phúc Trường Minh đạt chứng chỉ ISO 15189:2012
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Ngày 12/1/2023, khoa Xét nghiệm BVĐK Hồng Ngọc Phúc Trường Minh vinh dự
-                        được trao nhận chứng chỉ ISO 15189:2012 từ Văn phòng AOSC. Lễ trao nhận
-                        chứng chỉ được...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#benh-vien-hong-ngoc-vinh-du-tiep-don-hoang-gia-bhutan-toi-tham-quan/">
-                            <img class="img-zoom lazy"
-                                src="{{asset("assets/hoang-gia-bhutan-tham-benh-vien-hong-ngoc-8-1-540x300.jpg")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#benh-vien-hong-ngoc-vinh-du-tiep-don-hoang-gia-bhutan-toi-tham-quan/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Bệnh viện Hồng Ngọc vinh dự tiếp đón Hoàng gia Bhutan tới tham quan
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Chiều ngày 28/12 vừa qua, đoàn Hoàng gia Bhutan đã tới tham quan Bệnh
-                        viện Hồng Ngọc Phúc Trường Minh. Đây là vinh dự to lớn đối với toàn thể...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#benh-vien-da-khoa-hong-ngoc-co-so-my-dinh/">
-                            <img class="img-zoom lazy"
-                                src="{{asset("assets/benh-vien-hong-ngoc-my-dinh-tu-ben-ngoai-540x300.jpg")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#benh-vien-da-khoa-hong-ngoc-co-so-my-dinh/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Bệnh viện Đa khoa Hồng Ngọc – Phúc Trường Minh: Bệnh viện xanh – thông
-                            minh – tiêu chuẩn Anh Quốc giữa lòng Hà Nội
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Bệnh viện Đa khoa Hồng Ngọc - Phúc Trường Minh sẽ là bệnh viện thông minh
-                        với tỷ lệ phủ xanh lên đến 45%. Đây là bệnh viện đầu tiên...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a
-                            href="#khoa-san-phu-khoa-bvdk-hong-ngoc-don-vi-dau-tien-tai-viet-nam-nhan-chung-chi-cham-soc-suc-khoe-achs-uc/">
-                            <img class="img-zoom lazy" src="{{asset("assets/chung-chi-uc-540x300.jpg")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a
-                        href="#khoa-san-phu-khoa-bvdk-hong-ngoc-don-vi-dau-tien-tai-viet-nam-nhan-chung-chi-cham-soc-suc-khoe-achs-uc/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Khoa Sản phụ khoa BVĐK Hồng Ngọc – Đơn vị đầu tiên tại Việt Nam nhận chứng
-                            chỉ chăm sóc sức khỏe từ ACHSI (Úc)
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Vượt qua các tiêu chuẩn kiểm định quốc tế nghiêm ngặt của Hội đồng Úc
-                        về Chăm sóc sức khỏe (ACHSI), Khoa Sản Phụ khoa BVĐK Hồng Ngọc Phúc Trường...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#20-10-ngay-hoi-ao-hong-khi-cong-dong-cung-chung-tay-day-lui-ung-thu-vu/">
-                            <img class="img-zoom lazy" src="{{asset("assets/pink-day-3-540x300.jpg")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#20-10-ngay-hoi-ao-hong-khi-cong-dong-cung-chung-tay-day-lui-ung-thu-vu/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            20/10 ngày hội áo hồng – Khi cộng đồng cùng chung tay đẩy lùi ung thư
-                            vú
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        “Ngày hội áo hồng - Pinkday” là một sự kiện đặc biệt diễn ra tại bệnh
-                        viện Đa Khoa Hồng Ngọc đúng vào 20/10. Đây là dịp để lan tỏa...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#bv-hong-ngoc-bao-tro-y-te-cho-giai-chay-vmm-2022/">
-                            <img class="img-zoom lazy" src="{{asset("assets/bao-tro-y-te-1-540x300.jpg")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#bv-hong-ngoc-bao-tro-y-te-cho-giai-chay-vmm-2022/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            BV Hồng Ngọc bảo trợ y tế cho giải chạy VMM 2022 dưới những cung đường
-                            vô cùng khắc nghiệt
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Từ ngày 09 - 11/09/2022, tại vùng đất Sapa xinh đẹp nhưng đầy khắc nghiệt,
-                        giải chạy VMM – cuộc chạy bộ khó nhất tại Việt Nam đã diễn ra...
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div id="tab-331" class="tab-content ">
-            <div class="row mt-4">
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#kham-phu-khoa-cung-bac-si-hong-ngoc/">
-                            <img class="img-zoom lazy" src="{{asset("assets/0ac56ca74ecc9392cadd-540x300.jpg")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#kham-phu-khoa-cung-bac-si-hong-ngoc/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Khám phụ khoa cùng bác sĩ Hồng Ngọc
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Theo thống kê của Bộ Y tế, tỉ lệ mắc bệnh viêm nhiễm phụ khoa ở phụ nữ
-                        Việt Nam lên tới 90%, đây là con số báo động cảnh...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#uu-dai-tiem-chung-tron-goi/">
-                            <img class="img-zoom lazy" src="{{asset("assets/tablet-le-tan-2-540x300.jpg")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#uu-dai-tiem-chung-tron-goi/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Bệnh viện Hồng Ngọc ưu đãi tiêm chủng trọn gói lên tới 2,5 triệu đồng
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Nhân dịp Quốc tế Phụ nữ 8/3, Trung tâm Tiêm chủng Hồng Ngọc xin dành tặng
-                        các mẹ những ưu đãi lên tới 2,5 triệu đồng khi đăng ký gói...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#uu-dai-thai-san-va-sinh-con-tron-goi/">
-                            <img class="img-zoom lazy" src="{{asset("assets/Tablet-le-tan-1250x800-1.png")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#uu-dai-thai-san-va-sinh-con-tron-goi/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            QUÀ TẶNG MẸ CON – ĐI SINH TRÒN VẸN ưu đãi tới 20 TRIỆU gói thai sản
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        BV Hồng Ngọc dành tặng ưu đãi thai sản hấp dẫn lên tới 20 triệu cho các
-                        mẹ bầu, mẹ không chỉ được trải nghiệm hành trình sinh con nhẹ...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#uu-dai-kham-suc-khoe-nhan-li-xi-kep/">
-                            <img class="img-zoom lazy" src="{{asset("assets/1920x1080-sua-540x300.jpg")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#uu-dai-kham-suc-khoe-nhan-li-xi-kep/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            KHÁM SỨC KHỎE NHẬN LÌ XÌ TỚI 3.000.000Đ: COMBO ƯU ĐÃI CHỈ CÓ DỊP ĐẦU NĂM
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Từ 10/02/2023 – 20/03/2023, với mong muốn tạo cơ hội cho khách hàng kiểm
-                        tra sức khoẻ bắt đầu một năm mới khỏe mạnh hơn, Bệnh viện Đa khoa Hồng...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#luu-dai-chay-than-nhan-tao/">
-                            <img class="img-zoom lazy"
-                                src="{{asset("assets/Chay-than-nhan-tao-350x194.jpg")}}-540x300.jpg" )}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#luu-dai-chay-than-nhan-tao/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            [LÌ XÌ ĐẦU NĂM] BV Hồng Ngọc giảm 20% chi phí chạy thận nhân tạo
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Nhân dịp đầu xuân năm mới, BV Hồng Ngọc dành tặng khách hàng món quà lixi
-                        đầu năm, ưu đãi 20% chi phí chạy thận nhân tạo thường quy và...
-                    </p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a href="#cay-oc-tai-cho-be-viem-mang-nao/">
-                            <img class="img-zoom lazy" src="{{asset("assets/banner-01-540x300.jpg")}}"
-                                style="display: inline-block;">
-                        </a>
-                    </div>
-                    <a href="#cay-oc-tai-cho-be-viem-mang-nao/">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                            Cấy ốc tai cho bé viêm màng não – Hành trình phi thường và đầy cảm động
-                            để tìm lại âm thanh cho con
-                        </p>
-                    </a>
-                    <p class="fs14 text-justify">
-                        Số phận có những biến cố không thể lường được, bệnh tật bất ngờ ập đến
-                        đôi khi tưởng như dồn con người vào ngõ cụt. Nhưng may mắn, phép...
-                    </p>
-                </div>
-            </div>
-        </div> -->
+   
     </div>
 </div>
 <div class="clearfix">

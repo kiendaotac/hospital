@@ -2,12 +2,6 @@
         <div class="top-info text-right">
           <div class="container ">
             <div class="d-flex" style="justify-content: flex-end;">
-              <!-- <p class=" info1 mb-0">
-                <img src="{{asset("assets/images/icon-1.svg")}}")}}">
-                <span class="b600 text-white pl-2">
-                  Cấp cứu: 1900 636 555
-                </span>
-              </p> -->
               <p class=" info2 ml-3 mb-0">
                 <img src="{{asset("assets/images/icon-2.svg")}}")}}">
                 <span class="b600 text-white pl-2">
@@ -20,12 +14,12 @@
                   |
                 </span>
                 &nbsp;
-                <span class="search-form-tigger" data-toggle="search-form">
+                <!-- <span class="search-form-tigger" data-toggle="search-form">
                   <img src="{{asset("assets/images/icon-search.png")}}">
-                </span>
+                </span> -->
               </p>
               <div class="switch-lang">
-                  <a href="">Đằng nhập</a>
+                  <a href="">Đăng nhập</a>
               </div>
             </div>
             <div class="search-form-wrapper">
@@ -46,7 +40,7 @@
           <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
               <a class="navbar-brand" href="{{route('home')}}">
-                <img src="{{asset("assets/images/logo.png")}}"  width="104px" 
+                <img src="{{asset("assets/images/logo-tina.png")}}"  width="104px" 
                 class="logo-top">
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -104,11 +98,11 @@
                         </li>
                       </ul> -->
                     </li>
-                    <li id="menu-item-955" class="mega menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-955">
+                    <!-- <li id="menu-item-955" class="mega menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-955">
                       <a href="#dich-vu-y-te/">
                         Dịch vụ y tế
                       </a>
-                      <!-- <ul class="sub-menu">
+                      <ul class="sub-menu">
                         <li id="menu-item-44355" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44355">
                           <a href="#cac-chuyen-khoa-cua-benh-vien/">
                             Các chuyên khoa
@@ -179,16 +173,16 @@
                             Cơ xương khớp
                           </a>
                         </li>
-                      </ul> -->
-                    </li>
+                      </ul>
+                    </li> -->
                     <li id="menu-item-84590" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84590">
-                      <a href="#doi-ngu-bac-sy/">
+                      <a href="{{route('doctor')}}">
                         Đội ngũ bác sĩ
                       </a>
                     </li>
        
                     <li id="menu-item-1106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1106">
-                      <a href="blog">
+                      <a href="{{route('blog')}}">
                         Tin tức và ưu đãi
                       </a>
                       <!-- <ul class="sub-menu">
@@ -262,7 +256,7 @@
                       </ul>
                     </li> -->
                     <li id="menu-item-1103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1103">
-                      <a href="#lien-he-hop-tac/">
+                      <a href="">
                         Liên hệ
                       </a>
                       <!-- <ul class="sub-menu">
@@ -301,7 +295,7 @@
               <a href="#gioi-thieu/">
                 Giới thiệu
               </a>
-              <ul class="sub-menu">
+              <!-- <ul class="sub-menu">
                 <span class="submenu-button">
                   <i class="fa fa-angle-down" aria-hidden="true">
                   </i>
@@ -356,9 +350,9 @@
                     Brochure Bệnh viện Đa khoa Hồng Ngọc
                   </a>
                 </li>
-              </ul>
+              </ul> -->
             </li>
-            <li class="mega menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-955">
+            <!-- <li class="mega menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-955">
               <a href="#dich-vu-y-te/">
                 Dịch vụ y tế
               </a>
@@ -454,13 +448,13 @@
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> -->
             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84590">
-              <a href="#doi-ngu-bac-sy/">
+              <a href="{{route('doctor')}}">
                 Đội ngũ bác sĩ
               </a>
             </li>
-            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1111">
+            <!-- <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1111">
               <a href="#tu-van-suc-khoe/">
                 Tư vấn sức khỏe
               </a>
@@ -508,12 +502,12 @@
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> -->
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1106">
-              <a href="#tin-tuc-va-uu-dai/">
+              <a href="{{route('blog')}}">
                 Tin tức và ưu đãi
               </a>
-              <ul class="sub-menu">
+              <!-- <ul class="sub-menu">
                 <span class="submenu-button">
                   <i class="fa fa-angle-down" aria-hidden="true">
                   </i>
@@ -538,9 +532,9 @@
                     Từ thiện – Vì cộng đồng
                   </a>
                 </li>
-              </ul>
+              </ul> -->
             </li>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-32073">
+            <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-32073">
               <a href="#huong-dan-khach-hang/">
                 Hướng dẫn khách hàng
               </a>
@@ -606,12 +600,12 @@
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> -->
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1103">
               <a href="#lien-he-hop-tac/">
                 Liên hệ
               </a>
-              <ul class="sub-menu">
+              <!-- <ul class="sub-menu">
                 <span class="submenu-button">
                   <i class="fa fa-angle-down" aria-hidden="true">
                   </i>
@@ -624,15 +618,15 @@
                     Tuyển dụng
                   </a>
                 </li>
-              </ul>
+              </ul> -->
             </li>
           </ul>
         </div>
         <div class="mobile-meta 22">
-          <span class="search-form-tigger" data-toggle="search-form">
+          <!-- <span class="search-form-tigger" data-toggle="search-form">
             <i class="fa fa-search" aria-hidden="true">
             </i>
-          </span>
+          </span> -->
           <div class="search-form-wrapper">
             <form id="searchform" class="d-flex" method="get" action="#">
               <input type="text" class="search-field" name="s" placeholder="Tìm kiếm"
