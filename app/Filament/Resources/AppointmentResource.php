@@ -6,6 +6,7 @@ use App\Enums\StatusEnum;
 use App\Filament\Resources\AppointmentResource\Pages;
 use App\Filament\Resources\AppointmentResource\RelationManagers;
 use App\Models\Appointment;
+use App\Models\Doctor;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -26,6 +27,9 @@ class AppointmentResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\Select::make('doctor_id')->options(function () {
+                    return Doctor::whereStatus(StatusEnum::ACTIVE)->pluck('name', 'id');
+                }),
                 Forms\Components\TextInput::make('name'),
                 Forms\Components\TextInput::make('phone')->numeric(),
                 Forms\Components\DatePicker::make('dob'),
@@ -46,6 +50,7 @@ class AppointmentResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('doctor.name'),
                 Tables\Columns\TextColumn::make('name'),
                 Tables\Columns\TextColumn::make('phone'),
                 Tables\Columns\TextColumn::make('dob'),
