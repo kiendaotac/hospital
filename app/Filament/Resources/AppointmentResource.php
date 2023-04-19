@@ -27,14 +27,23 @@ class AppointmentResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('doctor_id')->options(function () {
+                Forms\Components\Select::make('doctor_id')
+                    ->required()
+                    ->label('Tên bác sỹ')
+                    ->options(function () {
                     return Doctor::whereStatus(StatusEnum::ACTIVE)->pluck('name', 'id');
                 }),
-                Forms\Components\TextInput::make('name'),
-                Forms\Components\TextInput::make('phone')->numeric(),
+                Forms\Components\TextInput::make('name')
+                    ->label('Tên bệnh nhân')
+                    ->required(),
+                Forms\Components\TextInput::make('phone')->numeric()->label('Số điện thoại')->required(),
                 Forms\Components\DatePicker::make('dob'),
                 Forms\Components\TextInput::make('email')->email(),
-                Forms\Components\Select::make('gender')->options([
+                Forms\Components\Select::make('gender')
+                    ->label('Giới tính')
+                    ->required()
+                    ->default(1)
+                    ->options([
                     0 => 'Nữ',
                     1=> 'Nam'
                 ]),
@@ -42,7 +51,7 @@ class AppointmentResource extends Resource
                 Forms\Components\Textarea::make('note'),
                 Forms\Components\DateTimePicker::make('time'),
                 Forms\Components\TextInput::make('service'),
-                Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->name)
+                Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->value)
             ]);
     }
 
