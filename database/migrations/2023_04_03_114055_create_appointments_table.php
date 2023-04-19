@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('doctor_id')->nullable();
             $table->string('name')->nullable();
             $table->string('phone')->nullable();
             $table->date('dob')->nullable();
