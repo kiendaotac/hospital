@@ -34,8 +34,8 @@ class DoctorResource extends Resource
                 Forms\Components\Textarea::make('activity')->name('Hoạt động')->required(),
                 Forms\Components\Textarea::make('research')->label('Nghiên cứu')->required(),
                 Forms\Components\Textarea::make('address')->label('Địa chỉ')->required(),
-                Forms\Components\TextInput::make('phone')->numeric()->label('Số điện thoại')->required(),
-                Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->name)->label('Trạng thái')->required()
+//                Forms\Components\TextInput::make('phone')->numeric()->label('Số điện thoại')->required(),
+                Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->value)->label('Trạng thái')->required()
             ]);
     }
 
@@ -51,7 +51,7 @@ class DoctorResource extends Resource
                 Tables\Columns\TextColumn::make('activity')->limit(40)->name('Hoạt động'),
                 Tables\Columns\TextColumn::make('research')->limit(40)->label('Nghiên cứu'),
                 Tables\Columns\TextColumn::make('address')->label('Địa chỉ'),
-                Tables\Columns\TextColumn::make('phone')->label('Số điện thoại'),
+//                Tables\Columns\TextColumn::make('phone')->label('Số điện thoại'),
                 Tables\Columns\TextColumn::make('status')->label('Trạng thái')
             ])
             ->filters([
