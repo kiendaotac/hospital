@@ -254,7 +254,18 @@
           lazyLoad: true,
           autoHeight: true,
           smartSpeed: 500,
-          navText: ['', '']
+          navText: ['', ''],
+          responsive: {
+            0 : {
+              items: 1
+            },
+            480 : {
+              items: 1
+            },
+            768 : {
+              items: 3
+            }
+          }
         });
 
         $('.list-partner').owlCarousel({

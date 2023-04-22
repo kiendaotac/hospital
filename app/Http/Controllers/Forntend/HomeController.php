@@ -56,6 +56,18 @@ class HomeController extends Controller
         return view('frontend.otp');
 
     }
+    public function gioithieu(){
+        return view('frontend.about');
+
+    }
+    public function dichvu(){
+        return view('frontend.dichvu');
+
+    }
+    public function contact(){
+        return view('frontend.contact');
+
+    }
     /**
      * Show the form for creating a new resource.
      */

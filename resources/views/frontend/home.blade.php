@@ -1,10 +1,11 @@
 @extends('frontend.layout.layout')
 @section('content')
 <div class="wrap-banner loop owl-carousel owl-theme owl-loaded owl-drag">
-
-    <a>
-        <img src="{{asset("assets/images/banner.png")}}" alt="">
-    </a>
+    <div class="banner-item">
+        <div class="left"><img class="normal" src="{{asset("assets/images/bs-tina.png")}}"></div>
+        <div class="middle" style=" background-image:url('{{asset("assets/images/looking-out.jpg")}}')"></div>
+        <div class="right"><img class="normal" src="{{asset("assets/images/doctor-banner.png")}}"></div>
+    </div>
 </div>
 <div class="section-1">
     <div class="container">
@@ -117,7 +118,8 @@
                                                 Phòng khám Phụ sản Tina Hồ Chí Minh
                                             </b>
                                             <br>
-                                            100 Lê Quang Định, P10, Q Bình Thạnh, TP Hồ chí Minh
+                                            738 Quang Trung, Phường 8
+Quận Gò Vấp, Thành Phố Hồ Chí Minh
                                         </p>
                                     </div>
                                 </div>
@@ -146,7 +148,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="">
-                    <h1 class="fs26 b600 text-uppercase">
+                    <h1 class="fs30 b600 text-uppercase">
                         DỊCH VỤ
                         <br>
                         PHỤ SẢN TINA
@@ -156,6 +158,7 @@
                         trải nghiệm các dịch vụ chăm sóc sức khỏe chất lương cao đạt tiêu chuẩn
                         quốc tế.
                     </p>
+                    <a class="read-more" href="#">Tìm hiểu thêm</a>
                 </div>
             </div>
             <div class="col-md-9">
@@ -164,8 +167,8 @@
                         <div class="ovh">
                             <picture>
                                 <source class="owl-lazy" media="(max-width: 768px)"
-                                    data-srcset="{{asset("assets/images/kham-benh-tai-nha.jpg" )}}">
-                                <img class="owl-lazy" data-src="{{asset("assets/images/kham-benh-tai-nha.jpg" )}}"
+                                    data-srcset="{{asset("assets/images/cham-soc-truoc-sinh.jpg" )}}">
+                                <img class="owl-lazy" data-src="{{asset("assets/images/cham-soc-truoc-sinh.jpg" )}}"
                                     alt="">
                             </picture>
                         </div>
@@ -173,7 +176,7 @@
                             <img src="{{asset("assets/images/icon-9.svg")}}" style="width: 28px;">
                             <a href="#kham-tai-nha-bv-hong-ngoc" class="pl-2">
                                 <span class="mb-1 fs18 green-link">
-                                    Khám bệnh tại nhà
+                                    Chăm sóc, tư vẫn trước sinh
                                 </span>
                             </a>
                         </div>
@@ -183,14 +186,14 @@
                             <picture>
                                 <source class="owl-lazy" media="(max-width: 768px)"
                                     data-srcset="{{asset("assets/images/cap-cuu.jpg" )}}">
-                                <img class="owl-lazy" data-src="{{asset("assets/images/cap-cuu.jpg" )}}" alt="">
+                                <img class="owl-lazy" data-src="{{asset("assets/images/kham-va-dieu-tri-phu-khoa.jpg" )}}" alt="">
                             </picture>
                         </div>
                         <div class="d-flex aic mt-3 service-link">
-                            <img src="{{asset("assets/images/icon-9.svg")}}" style="width: 28px;">
+                            <img src="{{asset("assets/images/icon-9.svg")}}")}}" style="width: 28px;">
                             <a href="#dich-vu-cap-cuu/" class="pl-2">
                                 <span class="mb-1 fs18 green-link">
-                                    Cấp cứu 24/24
+                                Khám và điều trị các bệnh phụ khoa
                                 </span>
                             </a>
                         </div>
@@ -199,8 +202,8 @@
                         <div class="ovh">
                             <picture>
                                 <source class="owl-lazy" media="(max-width: 768px)"
-                                    data-srcset="{{asset("assets/images/kham-tien-hon-nhan.jpg" )}}">
-                                <img class="owl-lazy" data-src="{{asset("assets/images/kham-tien-hon-nhan.jpg")}}"
+                                    data-srcset="{{asset("assets/images/sang-loc-ung-thu.png" )}}">
+                                <img class="owl-lazy" data-src="{{asset("assets/images/sang-loc-ung-thu.png")}}"
                                     alt="">
                             </picture>
                         </div>
@@ -208,7 +211,7 @@
                             <img src="{{asset("assets/images/icon-9.svg")}}" style="width: 28px;">
                             <a href="" class="pl-2">
                                 <span class="mb-1 fs18 green-link">
-                                    Khám sức khỏe tiền hôn nhân
+                                    Sàng lọc ung thư phụ khoa
                                 </span>
                             </a>
                         </div>
@@ -217,20 +220,20 @@
                         <div class="ovh">
                             <picture>
                                 <source class="owl-lazy" media="(max-width: 768px)"
-                                    data-srcset="{{asset("assets/images/tiem-chung.jpg" )}}">
-                                <img class="owl-lazy" data-src="{{asset("assets/images/tiem-chung.jpg" )}}" alt="">
+                                    data-srcset="{{asset("assets/images/kham-tong-quat.jpg" )}}">
+                                <img class="owl-lazy" data-src="{{asset("assets/images/kham-tong-quat.jpg" )}}" alt="">
                             </picture>
                         </div>
                         <div class="d-flex aic mt-3 service-link">
                             <img src="{{asset("assets/images/icon-9.svg")}}" style="width: 28px;">
                             <a href="#tiem-chung/" class="pl-2">
                                 <span class="mb-1 fs18 green-link">
-                                    Tiêm chủng
+                                    Gói khám sức khỏe phụ nữ tổng quát
                                 </span>
                             </a>
                         </div>
                     </div>
-                    <div class="pl-1 pr-1">
+                    <!-- <div class="pl-1 pr-1">
                         <div class="ovh">
                             <picture>
                                 <source class="owl-lazy" media="(max-width: 768px)"
@@ -243,11 +246,11 @@
                             <img src="{{asset("assets/images/icon-9.svg")}}" style="width: 28px;">
                             <a href="#goi-kham-nhi/" class="pl-2">
                                 <span class="mb-1 fs18 green-link">
-                                    Khám tổng quát nhi
+                                    Khám sức khỏe tiền hôn nhân
                                 </span>
                             </a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -259,7 +262,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="fs36 b600 text-white text-uppercase mb-5">
+                <h2 class="fs28 b600 text-white text-uppercase mb-5">
                     Số Liệu nổi bật
                 </h2>
                 <div class="blog-1">
@@ -361,7 +364,7 @@
 <div class="section-4">
     <div class="container">
         <div class="d-flex jcs aic pb-2 w-100" style="border-bottom: 1px solid #2F4857;">
-            <h2 class="fs36 b600 text-uppercase ls2 mb-0">
+            <h2 class="fs28 b600 text-uppercase ls2 mb-0">
                 tin tức hoạt động
 </h2>
             <p class="mb-0">
@@ -431,7 +434,6 @@
 
     </div>
 </div>
-<!-- <div class="section-5">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.7368039675343!2d106.69602761410545!3d10.805813561607053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528c733641dc7%3A0x9a19a1283a045554!2zMTAwIEzDqiBRdWFuZyDEkOG7i25oLCBQaMaw4budbmcgMTQsIELDrG5oIFRo4bqhbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1680010486522!5m2!1svi!2s" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div> -->
+<div >
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6645603591746!2d106.65425467558968!3d10.836961889315527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a0c3cfcb85%3A0x491224bfa9033145!2zNzM4IFF1YW5nIFRydW5nLCBQaMaw4budbmcgOCwgR8OyIFbhuqVwLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1682176344410!5m2!1svi!2s" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 @endsection

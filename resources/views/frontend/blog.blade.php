@@ -1,10 +1,12 @@
 @extends('frontend.layout.layout')
 @section('content')
-<div class="page-banner"> <img
-        src="{{asset("assets/images/banner.png")}}"
-        class="w-100"></div>
+<div class="banner-item">
+        <div class="left"><img class="normal" src="{{asset("assets/images/bs-tina.png")}}"></div>
+        <div class="middle" style=" background-image:url('{{asset("assets/images/looking-out.jpg")}}')"></div>
+        <div class="right"><img class="normal" src="{{asset("assets/images/doctor-banner.png")}}"></div>
+    </div>
 <div class="container">
-<h1 class="page-title">Tin tức phụ sản Tina</h1>
+<h2 class="page-title">Tin tức phụ sản Tina</h2>
     <div class="row">
         @foreach($blogs as $post)
 
