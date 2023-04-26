@@ -2,21 +2,49 @@
     <div class="topbar">
         <div class="container ">
             <div class="d-flex" style="justify-content: flex-end;">
-                <p class=" info2 ml-3 mb-0">
+                <a href="tel: 0858608080" class=" text-white info2 ml-3 mb-0">
                     <img src="{{asset("assets/images/icon-2.svg")}}" )}}">
                     <span class="text-white pl-2">
-                        0915 45 13 13
+                    0858 60 80 80
                     </span>
-                </p>
+                </a>
                 <p class="ml-3 mb-0" style="line-height: 32px;">
                     &nbsp;
                     <span class="fs18 b600 text-white">
                         |
                     </span>
                     &nbsp;
-                <div class="switch-lang ">
-                    <a href="" class="text-white">Đăng nhập</a>
+                    <div data-toggle="modal" data-target="#login" class="switch-lang ">
+                    <a  class="text-white">Đăng nhập</a>
                 </div>
+            <div class="modal modal-login fade" id="login" tabindex="1" role="dialog"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <button class="modal-close modal-toggle " data-dismiss="modal" aria-label="Close">
+                            X
+                        </button>
+                        <div class="modal-body">
+                            <h2 class="modal-title">
+                                Đăng nhập
+                            </h2>
+                            <div class="appointment-form-popup">
+                                <form action="{{route('nhaptelephone')}}">
+                                    <div class="form-group">
+                                        <input style="Width:100%" type="telephone" name="telephone" value=""
+                                            placeholder="Nhập Số điện thoại để đăng nhập" required   >
+                                    </div>
+                     
+                                    <button>
+                                        Đăng nhập ngay
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
             </div>
         </div>
     </div>

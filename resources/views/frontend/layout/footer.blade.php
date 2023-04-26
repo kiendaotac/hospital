@@ -7,11 +7,8 @@
                         <img src="{{asset("assets/images/logo-tina.png")}}" width="75px" class="logo-footer d-block">
                     </a>
                 </div>
-                <p class="fs16  b600 mt-2 mb-2" style="    text-align: justify;
-}">
-                    Phòng khám sản phụ khoa Tina còn được trang bị hệ thống máy móc hiện đại như máy siêu âm, máy chụp
-                    X-quang, máy điện tim và các thiết bị khác giúp cho việc chẩn đoán và điều trị các bệnh lý phụ khoa
-                    được dễ dàng và chính xác hơn.
+                <p class=" mt-2 mb-2" style="    text-align: justify;">
+                  Phòng khám sản phụ khoa Tina còn được trang bị hệ thống máy móc hiện đại như máy siêu âm, máy chụp X-quang, máy điện tim và các thiết bị khác giúp cho việc chẩn đoán và điều trị các bệnh lý phụ khoa được dễ dàng và chính xác hơn.
                 </p>
 
             </div>
@@ -84,7 +81,7 @@ Quận Gò Vấp, Thành Phố Hồ Chí Minh</p>
         </div>
 
     </div>
-    <div class="text-center text-white text-uppercase copy-right" style="padding: 15px 0px; background-color: #ef4566;">
+    <div class="text-center text-white text-uppercase copy-right" style="padding: 15px 0px; background-color: #ee4668;">
     </div>
 
     <img src="{{asset("assets/images/icon-21.svg")}}" class="gototop">

@@ -1,23 +1,10 @@
 @extends('frontend.layout.layout')
 @section('content')
-<!-- <div class="wrap-banner loop owl-carousel owl-theme owl-loaded owl-drag">
-
-    <a>
-        <img src="{{asset("assets/images/banner-web-1.jpg")}}" alt="">
-    </a>
-    <a>
-        <img src="{{asset("assets/images/e3b26251542f9371ca3e-scaled.jpg")}}" alt="">
-    </a>
-    <a>
-        <img src="{{asset("assets/images/BVHN-nuoi-con-bang-sua-me.jpg")}}" alt="">
-    </a>
-
-</div> -->
 <div class="register-wrap">
     <div class="register-form">
         <h3 class="register-form-title">Đặt lịch khám</h3>
-        <form action="{{route('dangky')}}"  enctype="multipart/form-data" method="post" required>
-        <input type="hidden" name="_token" value="{{ csrf_token() }}" > 
+        <form action="{{route('dangky')}}" enctype="multipart/form-data" method="post" required>
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group">
                 <label for=""> Nhập họ tên của bạn </label>
                 <input style="Width:100%" type="text" name="name_doctor" value="" placeholder="Nhập Họ tên" required>
@@ -39,10 +26,28 @@
                 <label for=""> Chọn ngày khám</label>
                 <input style="Width:100%" type="date" name="date" value="" placeholder="Nhập Họ tên" required>
             </div>
-            <div class="form-group">
-                <label for=""> Chọn giờ khám</label>
-                <input id="appt-time" type="time" name="appt-time" min="8:00" max="18:00" required />
+            <div class="form-group time">
+                <label> Chọn giờ khám</label>
+                @php
+                $starTime = now()->setTime(8,0);
+                $endTime = now()->setTime(18, 0);
+                $index = 0;
+                @endphp
+                @while($starTime->lessThanOrEqualTo($endTime))
+                <input type="radio" class="btn-check" id="option-{{ $index }}" name="options" autocomplete="off"
+                    value="{{($starTime->format('H:i'))}}" />
+                <label class="btn btn-secondary" for="option-{{ $index++ }}">{{($starTime->format('H:i'))}}</label>
+                @php($starTime->addMinutes(15))
+                @endwhile
             </div>
+            <div class="form-group">
+            <label> Chọn Bác sĩ</label>
+                <select>
+                    @foreach($doctors as $doctor)
+                    <option>{{$doctor->name}}</option>
+                    @endforeach
+                </select>
+            </div>  
             <button type="submit">
                 Đặt lịch ngay
             </button>

@@ -1,5 +1,21 @@
 @extends('frontend.layout.layout')
 @section('content')
+<div class="bts-popup" role="alert">
+        <div class="bts-popup-container">
+            <p>Đặt lịch khám ngay tại đây</p>
+            <form action="{{route('nhaptelephone')}}">
+            <div class="form-group">
+                                        <input style="Width:100%" type="telephone" name="telephone" value=""
+                                            placeholder="Nhập Số điện thoại để đặt lịch" required>
+                                    </div>
+                     
+                                    <button>
+                                        Đặt lịch ngay
+                                    </button>
+</form>
+            <a href="#0" class="bts-popup-close img-replace">Close</a>
+        </div>
+    </div>
 <div class="wrap-banner loop owl-carousel owl-theme owl-loaded owl-drag">
     <div class="banner-item">
         <div class="left"><img class="normal" src="{{asset("assets/images/bs-tina.png")}}"></div>
@@ -44,9 +60,9 @@
                                 </p>
                                 
                                 <div class="contact">
-                                    <a href="tel: (+84)2473008866">
+                                    <a href="tel:0858 60 80 80">
                                         <img src="{{asset("assets/images/phone.png")}}">
-                                        0915 45 13 13
+                                        0858 60 80 80
                                     </a>
                                     <span>
                                         Mọi thông tin chi tiết xin liên lạc với Hotline của Phụ sản Tina.
@@ -57,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div   data-toggle="modal" data-target="#exampleModal3" class="item item-4" >
+            <div   data-toggle="modal" data-target="#exampleModal3" class="item item-2" >
                 <img class="normal" src="{{asset("assets/images/icon-5.svg")}}">
                 <img class="active" src="{{asset("assets/images/icon-5-active.svg")}}">
                 <span class="pl-3">
@@ -79,7 +95,7 @@
                                 <form action="{{route('nhaptelephone')}}">
                                     <div class="form-group">
                                         <input style="Width:100%" type="number" name="telephone" value=""
-                                            placeholder="Nhập Số điện thoại để đặt lịch">
+                                            placeholder="Nhập Số điện thoại để đặt lịch" required   >
                                     </div>
                      
                                     <button>
@@ -91,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div data-toggle="modal" data-target="#exampleModal4" class="item item-4">
+            <div data-toggle="modal" data-target="#exampleModal4" class="item item-3">
                 <img class="normal" src="{{asset("assets/images/icon-6.svg")}}">
                 <img class="active" src="{{asset("assets/images/icon-6-active.svg")}}">
                 <span class="pl-3">
@@ -129,7 +145,7 @@ Quận Gò Vấp, Thành Phố Hồ Chí Minh
                     </div>
                 </div>
             </div>
-            <div class="item item-2">
+            <div class="item item-4">
                 <a href="" target="_blank">
                     <img class="normal" src="{{asset("assets/images/icon-4.svg")}}">
                     <img class="active" src="{{asset("assets/images/icon-4-active.svg")}}">
@@ -389,7 +405,7 @@ Quận Gò Vấp, Thành Phố Hồ Chí Minh
                         {{Str::limit($post->title, 79 , ' ...')}}
                         </p>
                     </a>
-                    <p class="fs14 text-justify">
+                    <p class=" text-justify">
                     {{Str::limit($post->excerpt, 200 , ' ...')}}
                     </p>
                 </div>

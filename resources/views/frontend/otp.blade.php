@@ -1,18 +1,10 @@
 @extends('frontend.layout.layout')
 @section('content')
-<!-- <div class="wrap-banner loop owl-carousel owl-theme owl-loaded owl-drag">
-
-    <a>
-        <img src="{{asset("assets/images/banner-web-1.jpg")}}" alt="">
-    </a>
-    <a>
-        <img src="{{asset("assets/images/e3b26251542f9371ca3e-scaled.jpg")}}" alt="">
-    </a>
-    <a>
-        <img src="{{asset("assets/images/BVHN-nuoi-con-bang-sua-me.jpg")}}" alt="">
-    </a>
-
-</div> -->
+<div class="banner-item">
+        <div class="left"><img class="normal" src="{{asset("assets/images/bs-tina.png")}}"></div>
+        <div class="middle" style=" background-image:url('{{asset("assets/images/looking-out.jpg")}}')"></div>
+        <div class="right"><img class="normal" src="{{asset("assets/images/doctor-banner.png")}}"></div>
+    </div>
 <div class="register-wrap">
     <div class="register-form">
         <h3 class="register-form-title">Nhập OTP</h3>

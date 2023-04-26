@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 use Stephenjude\FilamentBlog\Models\Post;
 use App\Models\Doctor;
 use Illuminate\Support\Str;
-
 class HomeController extends Controller
 {
     /**
@@ -23,7 +22,14 @@ class HomeController extends Controller
     public function dangky(Request $request){
         $phone = trim($request->telephone);
         $appointment = Appointment::where('phone', $phone)->first();
-        return view('frontend.dangky', compact('appointment'));
+        $current = Carbon::parse('08:00');
+        (Carbon::parse('08:00')->addMinutes(15)->format('H:i'));
+        $doctors = Doctor::all();
+        return view('frontend.dangky', array(
+            'appointment'=> $appointment,
+            'current'=>     $current,
+            'doctors' => $doctors
+        ));
     }
     public function postdangky(Request $request){
         $params = $request->only(['name', 'phone', 'dob', 'service']);
