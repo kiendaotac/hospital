@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Forntend\HomeController;
+use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,7 +26,6 @@ Route::get('doctor_detail/{id}', [HomeController::class, 'doctor_detail'])->name
 Route::get('dichvu', [HomeController::class, 'dichvu'])->name('dichvu');
 Route::get('lienhe', [HomeController::class, 'contact'])->name('lienhe');
 
-Route::middleware('guest')->namespace('Frontend')->name('frontend')->group(function (){
-
-
+Route::middleware('guest:customer')->namespace('Frontend')->name('frontend.')->group(function (){
+    Route::post('customer/login', [\App\Http\Controllers\Frontend\LoginController::class, 'login'])->name('customer.login');
 });
