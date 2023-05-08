@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Frontend;
+namespace App\Http\Controllers\Forntend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Appointment;
@@ -15,7 +15,8 @@ class HomeController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {$posts = Post::published()->latest()->take(6)->get();
+    {
+        $posts = Post::published()->latest()->take(6)->get();
         return view('frontend.home', compact('posts'));
     }
     public function dangky(Request $request){
@@ -72,9 +73,6 @@ class HomeController extends Controller
     public function contact(){
         return view('frontend.contact');
 
-    }
-    public function history(){
-        return view('frontend.history');
     }
     /**
      * Show the form for creating a new resource.

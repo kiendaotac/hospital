@@ -106,7 +106,7 @@ $(function () {
 
     $(window).bind('scroll',
         function () {
-            if ($(window).scrollTop() > 50) {
+            if ($(window).scrollTop() > 200) {
                 $('.wrap-menu').addClass('sticky');
                 $('.header-mobile').addClass('sticky');
             } else {

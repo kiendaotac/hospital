@@ -13,7 +13,7 @@
                 <label for=""> Ngày tháng năm sinh</label>
                 <input style="Width:100%" type="date" name="date" value="" placeholder="Nhập Họ tên" required>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for=""> Chọn theo Chuyên khoa </label>
                 <select name="service" id="">
                     <option disable>Chọn theo Chuyên khoa</option>
@@ -21,10 +21,10 @@
                     <option>Khám sức khỏe tiền hôn nhân</option>
                     <option>Tiêm chủng</option>
                 </select>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for=""> Chọn ngày khám</label>
-                <input style="Width:100%" type="date" name="date" value="" placeholder="Nhập Họ tên" required>
+                <input style="Width:100%" type="date" name="date" placeholder="Nhập Họ tên" required>
             </div>
             <div class="form-group time">
                 <label> Chọn giờ khám</label>
@@ -41,11 +41,12 @@
                 @endwhile
             </div>
             <div class="form-group">
-            <label> Chọn Bác sĩ</label>
+            <label> Chọn dịch vụ khám</label>
                 <select>
-                    @foreach($doctors as $doctor)
-                    <option>{{$doctor->name}}</option>
-                    @endforeach
+                   <option value="Gói khám sức khỏe phụ nữ tổng quát">Gói khám sức khỏe phụ nữ tổng quát</option>
+                   <option value="Chăm sóc, tư vẫn trước sinh">Chăm sóc, tư vẫn trước sinh</option>
+                   <option value="Khám và điều trị các bệnh phụ khoa">Khám và điều trị các bệnh phụ khoa</option>
+                   <option value="Sàng lọc ung thư phụ khoa">Sàng lọc ung thư phụ khoa</option>
                 </select>
             </div>  
             <button type="submit">

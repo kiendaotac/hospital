@@ -16,8 +16,12 @@
                     &nbsp;
                 @auth('customer')
                     <div class="switch-lang ">
-                        <a class="text-white pointer">Xin chào! {{ \Illuminate\Support\Facades\Auth::guard('customer')->user()->name }}</a>
-                    </div>
+                        <a class="text-white pointer">Xin chào! {{ \Illuminate\Support\Facades\Auth::guard('customer')->user()->name }} <img width="10px" src="{{asset("assets/images/icon-down.png")}}" )}}"></a>
+                    <ul>
+                    <li><a href="{{route('lichsukham')}}">Lịch sử khám</a> </li>
+                      <li><a>Thoát</a></li>
+                    </ul>
+                      </div>
                 @else
                     <div data-toggle="modal" data-target="#login" class="switch-lang ">
                         <a class="text-white pointer">Đăng nhập</a>
@@ -134,9 +138,19 @@
                         |
                     </span>
                     &nbsp;
-                <div class="switch-lang ">
-                    <a href="" class="text-white">Đăng nhập</a>
-                </div>
+                    @auth('customer')
+                    <div class="switch-lang ">
+                        <a class="text-white pointer">Xin chào! {{ \Illuminate\Support\Facades\Auth::guard('customer')->user()->name }} <img width="10px" src="{{asset("assets/images/icon-down.png")}}" )}}"></a>
+                    <ul>
+                      <li><a>Lịch sử khám</a> </li>
+                      <li><a>Thoát</a></li>
+                    </ul>
+                      </div>
+                @else
+                    <div data-toggle="modal" data-target="#login" class="switch-lang ">
+                        <a class="text-white pointer">Đăng nhập</a>
+                    </div>
+                @endauth
             </div>
         </div>
     </div>
@@ -150,14 +164,14 @@
         </span>
         </div>
         <div class="mobile-logo">
-            <a class="navbar-brand" href="#">
-                <img src="{{asset("assets/images/logo-tina.png")}}" class="logo-top">
+            <a class="navbar-brand" href="{{route('home')}}">
+                <img src="{{asset("assets/images/logo-tina.png")}}" width="80px"  class="logo-top">
             </a>
         </div>
         <div class="menu-menu-1-container">
             <ul id="menu-menu-2" class="mobile-menu navbar-nav ml-auto">
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-947">
-                    <a href="#gioi-thieu/">
+                    <a href="{{route('gioithieu')}}">
                         Giới thiệu
                     </a>
                     <!-- <ul class="sub-menu">
@@ -368,6 +382,12 @@
                     </li>
                   </ul>
                 </li> -->
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1103">
+                    <a href="{{route('dichvu')}}">
+                        Dịch vụ của chúng tôi
+                    </a>
+           
+                </li>
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1106">
                     <a href="{{route('blog')}}">
                         Tin tức và ưu đãi
@@ -399,91 +419,11 @@
                     </li>
                   </ul> -->
                 </li>
-                <!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-32073">
-                  <a href="#huong-dan-khach-hang/">
-                    Hướng dẫn khách hàng
-                  </a>
-                  <ul class="sub-menu">
-                    <span class="submenu-button">
-                      <i class="fa fa-angle-down" aria-hidden="true">
-                      </i>
-                      <i class="fa fa-angle-up" aria-hidden="true">
-                      </i>
-                    </span>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80194"
-                    style="display: none;">
-                      <a href="#phongnoitru-ptm/">
-                        Phòng Nội trú Hồng Ngọc Phúc Trường Minh
-                      </a>
-                    </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-71936"
-                    style="display: none;">
-                      <a href="#phongnoitru-yn/">
-                        Phòng Nội trú Hồng Ngọc Yên Ninh
-                      </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1047"
-                    style="display: none;">
-                      <a href="#noi-quy-benh-vien/">
-                        Nội quy bệnh viện
-                      </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1082"
-                    style="display: none;">
-                      <a href="#quy-trinh-tham-kham/">
-                        Quy trình thăm khám tại BVĐK Hồng Ngọc
-                      </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1045"
-                    style="display: none;">
-                      <a href="#thu-tuc-xuat-nhap-vien/">
-                        Hướng dẫn thủ tục xuất, nhập viện
-                      </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1062"
-                    style="display: none;">
-                      <a href="#tien-ich-benh-vien-hong-ngoc/">
-                        Tiện ích Bệnh viện Hồng Ngọc
-                      </a>
-                    </li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1091"
-                    style="display: none;">
-                      <a href="#cau-hoi-thuong-gap/">
-                        Câu hỏi thường gặp
-                      </a>
-                    </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-80611"
-                    style="display: none;">
-                      <a href="#quy-dinh-cap-lai-cac-giay-to-lien-quan-den-qua-trinh-kham-chua-benh/">
-                        Hướng dẫn thủ tục cấp lại các giấy tờ
-                      </a>
-                    </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82530"
-                    style="display: none;">
-                      <a href="#huong-dan-thu-tuc-trich-sao-ho-so-benh-an">
-                        Hướng dẫn thủ tục trích sao hồ sơ bệnh án
-                      </a>
-                    </li>
-                  </ul>
-                </li> -->
+        
                 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1103">
-                    <a href="#lien-he-hop-tac/">
+                    <a href="{{route('lienhe')}}">
                         Liên hệ
                     </a>
-                    <!-- <ul class="sub-menu">
-                    <span class="submenu-button">
-                      <i class="fa fa-angle-down" aria-hidden="true">
-                      </i>
-                      <i class="fa fa-angle-up" aria-hidden="true">
-                      </i>
-                    </span>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35319"
-                    style="display: none;">
-                      <a href="#tuyen-dung/">
-                        Tuyển dụng
-                      </a>
-                    </li>
-                  </ul> -->
                 </li>
             </ul>
         </div>

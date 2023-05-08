@@ -1,21 +1,21 @@
 @extends('frontend.layout.layout')
 @section('content')
 <div class="bts-popup" role="alert">
-        <div class="bts-popup-container">
-            <p>Đặt lịch khám ngay tại đây</p>
-            <form action="{{route('nhaptelephone')}}">
+    <div class="bts-popup-container">
+        <p>Đặt lịch khám ngay tại đây</p>
+        <form action="{{route('nhaptelephone')}}">
             <div class="form-group">
-                                        <input style="Width:100%" type="telephone" name="telephone" value=""
-                                            placeholder="Nhập Số điện thoại để đặt lịch" required>
-                                    </div>
-                     
-                                    <button>
-                                        Đặt lịch ngay
-                                    </button>
-</form>
-            <a href="#0" class="bts-popup-close img-replace">Close</a>
-        </div>
+                <input style="Width:100%" type="telephone" name="telephone" value=""
+                    placeholder="Nhập Số điện thoại để đặt lịch" required>
+            </div>
+
+            <button>
+                Đặt lịch ngay
+            </button>
+        </form>
+        <a href="#0" class="bts-popup-close img-replace">Close</a>
     </div>
+</div>
 <div class="wrap-banner loop owl-carousel owl-theme owl-loaded owl-drag">
     <div class="banner-item">
         <div class="left"><img class="normal" src="{{asset("assets/images/bs-tina.png")}}"></div>
@@ -55,10 +55,10 @@
                                         Phòng khám phụ sản Tina Hồ Chí Minh
                                     </span>
                                     <span class="text-right">
-                                        24/7
+                                    Thứ 2 đến thứ 6 từ 16h30 - 20h30<br> Thứ 7, Chủ nhật: sáng 8h-11h30, chiều 13h - 20h30
                                     </span>
                                 </p>
-                                
+
                                 <div class="contact">
                                     <a href="tel:0858 60 80 80">
                                         <img src="{{asset("assets/images/phone.png")}}">
@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </div>
-            <div   data-toggle="modal" data-target="#exampleModal3" class="item item-2" >
+            <div data-toggle="modal" data-target="#exampleModal3" class="item item-2">
                 <img class="normal" src="{{asset("assets/images/icon-5.svg")}}">
                 <img class="active" src="{{asset("assets/images/icon-5-active.svg")}}">
                 <span class="pl-3">
@@ -95,9 +95,9 @@
                                 <form action="{{route('nhaptelephone')}}">
                                     <div class="form-group">
                                         <input style="Width:100%" type="number" name="telephone" value=""
-                                            placeholder="Nhập Số điện thoại để đặt lịch" required   >
+                                            placeholder="Nhập Số điện thoại để đặt lịch" required>
                                     </div>
-                     
+
                                     <button>
                                         Đặt lịch ngay
                                     </button>
@@ -135,7 +135,7 @@
                                             </b>
                                             <br>
                                             738 Quang Trung, Phường 8
-Quận Gò Vấp, Thành Phố Hồ Chí Minh
+                                            Quận Gò Vấp, Thành Phố Hồ Chí Minh
                                         </p>
                                     </div>
                                 </div>
@@ -202,14 +202,15 @@ Quận Gò Vấp, Thành Phố Hồ Chí Minh
                             <picture>
                                 <source class="owl-lazy" media="(max-width: 768px)"
                                     data-srcset="{{asset("assets/images/cap-cuu.jpg" )}}">
-                                <img class="owl-lazy" data-src="{{asset("assets/images/kham-va-dieu-tri-phu-khoa.jpg" )}}" alt="">
+                                <img class="owl-lazy"
+                                    data-src="{{asset("assets/images/kham-va-dieu-tri-phu-khoa.jpg" )}}" alt="">
                             </picture>
                         </div>
                         <div class="d-flex aic mt-3 service-link">
-                            <img src="{{asset("assets/images/icon-9.svg")}}")}}" style="width: 28px;">
+                            <img src="{{asset("assets/images/icon-9.svg")}}" )}}" style="width: 28px;">
                             <a href="#dich-vu-cap-cuu/" class="pl-2">
                                 <span class="mb-1 fs18 green-link">
-                                Khám và điều trị các bệnh phụ khoa
+                                    Khám và điều trị các bệnh phụ khoa
                                 </span>
                             </a>
                         </div>
@@ -219,8 +220,7 @@ Quận Gò Vấp, Thành Phố Hồ Chí Minh
                             <picture>
                                 <source class="owl-lazy" media="(max-width: 768px)"
                                     data-srcset="{{asset("assets/images/sang-loc-ung-thu.png" )}}">
-                                <img class="owl-lazy" data-src="{{asset("assets/images/sang-loc-ung-thu.png")}}"
-                                    alt="">
+                                <img class="owl-lazy" data-src="{{asset("assets/images/sang-loc-ung-thu.png")}}" alt="">
                             </picture>
                         </div>
                         <div class="d-flex aic mt-3 service-link">
@@ -353,7 +353,7 @@ Quận Gò Vấp, Thành Phố Hồ Chí Minh
                         <div class="pl-3">
                             <div style="border-bottom: 1px solid #FFFFFF;">
                                 <p class="fs18 text-uppercase b600 text-white mb-0">
-                                    TTƯT. BSCK II        
+                                    TTƯT. BSCK II
                                 </p>
                                 <p class="text-white">
                                     Giám đốc Phòng khám Phụ sản Tina
@@ -382,36 +382,34 @@ Quận Gò Vấp, Thành Phố Hồ Chí Minh
         <div class="d-flex jcs aic pb-2 w-100" style="border-bottom: 1px solid #2F4857;">
             <h2 class="fs28 b600 text-uppercase ls2 mb-0">
                 tin tức hoạt động
-</h2>
+            </h2>
             <p class="mb-0">
-                <a class="more" href="#tin-tuc-va-uu-dai/">
+                <a class="more" href="{{route('blog')}}">
                     Xem thêm
                 </a>
             </p>
         </div>
         <div class="row mt-4">
-            @foreach($posts as $post    )
-                <div class="col-md-4 mb-4">
-                    <div class="ovh">
-                        <a
-                            href="{{route('post',$post->slug)}}">
-                            <img data-src="{{$post->banner_url}}"
-                                class="img-zoom lazy"
-                                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
-                        </a>
-                    </div>
+            @foreach($posts as $post )
+            <div class="col-md-4 mb-4">
+                <div class="ovh">
                     <a href="{{route('post',$post->slug)}}">
-                        <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
-                        {{Str::limit($post->title, 79 , ' ...')}}
-                        </p>
+                        <img data-src="{{$post->banner_url}}" class="img-zoom lazy"
+                            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
                     </a>
-                    <p class=" text-justify">
-                    {{Str::limit($post->excerpt, 200 , ' ...')}}
-                    </p>
                 </div>
-                @endforeach
+                <a href="{{route('post',$post->slug)}}">
+                    <p class="b600 fs18 mt-3 mb-2 green-link link-hover">
+                        {{Str::limit($post->title, 79 , ' ...')}}
+                    </p>
+                </a>
+                <p class=" text-justify">
+                    {{Str::limit($post->excerpt, 200 , ' ...')}}
+                </p>
             </div>
-   
+            @endforeach
+        </div>
+
     </div>
 </div>
 <div class="clearfix">
@@ -450,6 +448,10 @@ Quận Gò Vấp, Thành Phố Hồ Chí Minh
 
     </div>
 </div>
-<div >
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6645603591746!2d106.65425467558968!3d10.836961889315527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a0c3cfcb85%3A0x491224bfa9033145!2zNzM4IFF1YW5nIFRydW5nLCBQaMaw4budbmcgOCwgR8OyIFbhuqVwLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1682176344410!5m2!1svi!2s" width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+<div>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6645603591746!2d106.65425467558968!3d10.836961889315527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a0c3cfcb85%3A0x491224bfa9033145!2zNzM4IFF1YW5nIFRydW5nLCBQaMaw4budbmcgOCwgR8OyIFbhuqVwLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1682176344410!5m2!1svi!2s"
+        width="100%" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
 @endsection
