@@ -2,52 +2,21 @@
 @section('content')
     <div class="history-wrapper">
         <h2 class="history-title">Lịch sử khám bệnh</h2>
-
-    <ul class="timeline">
-
-<!-- Item 1 -->
-<li>
-    <div class="direction-r">
-        <div class="flag-wrapper">
-            <span class="flag">Freelancer</span>
-            <span class="time-wrapper"><span class="time">2013 - present</span></span>
-        </div>
-        <div class="desc">My current employment. Way better than the position before!</div>
+        <ul class="timeline">
+            @foreach($appointments as $appointment)
+                <!-- Item -->
+                <li>
+                    <div class="direction-{{ $loop->odd ? 'l' : 'r' }}">
+                        <div class="flag-wrapper">
+                            <span class="flag">{{ $appointment->doctor->name ?? 'Chưa đặt bác sỹ' }}</span>
+                            <span class="time-wrapper"><span class="time">{{ $appointment->time }}</span></span>
+                        </div>
+                        <div class="desc">{{ $appointment->service }}</div>
+                    </div>
+                </li>
+                <!-- End Item -->
+            @endforeach
+        </ul>
     </div>
-</li>
-
-<!-- Item 2 -->
-<li>
-    <div class="direction-l">
-        <div class="flag-wrapper">
-            <span class="flag">Apple Inc.</span>
-            <span class="time-wrapper"><span class="time">2011 - 2013</span></span>
-        </div>
-        <div class="desc">My first employer. All the stuff I've learned and projects I've been working on.</div>
-    </div>
-</li>
-
-<!-- Item 3 -->
-<li>
-    <div class="direction-r">
-        <div class="flag-wrapper">
-            <span class="flag">Harvard University</span>
-            <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
-        </div>
-        <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
-    </div>
-</li>
-<li>
-    <div class="direction-l">
-        <div class="flag-wrapper">
-            <span class="flag">Harvard University</span>
-            <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
-        </div>
-        <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
-    </div>
-</li>
-
-</ul>
-</div>
 
 @endsection

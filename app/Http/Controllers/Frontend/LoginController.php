@@ -21,4 +21,10 @@ class LoginController extends Controller
             'loginError'=> 'Đăng nhập thất bại'
         ]);
     }
+
+    public function logout()
+    {
+        Auth::guard('customer')->logout();
+        return redirect()->back();
+    }
 }

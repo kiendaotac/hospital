@@ -5,23 +5,36 @@
         <h3 class="register-form-title">Đặt lịch khám</h3>
         <form action="{{route('dangky')}}" enctype="multipart/form-data" method="post" required>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <div class="form-group">
-                <label for=""> Nhập họ tên của bạn </label>
-                <input style="Width:100%" type="text" name="name_doctor" value="" placeholder="Nhập Họ tên" required>
-            </div>
+            @auth('customer')
+                <div class="form-group">
+                    <label for=""> Nhập họ tên của bạn </label>
+                    <input style="Width:100%" type="text" name="name" readonly value="{{ auth('customer')->user()->name }}" placeholder="Nhập Họ tên" required>
+                </div>
+                <div class="form-group">
+                    <label for=""> Số điện thoại</label>
+                    <input style="Width:100%" type="text" name="phone" value="{{ auth('customer')->user()->phone }}" placeholder="Nhập số điện thoại" required>
+                </div>
+            @else
+                @if($appointment)
+                    <div class="form-group">
+                        <label for=""> Nhập họ tên của bạn </label>
+                        <input style="Width:100%" type="text" name="name" readonly value="{{ $appointment->name }}" placeholder="Nhập Họ tên" required>
+                    </div>
+                @else
+                    <div class="form-group">
+                        <label for=""> Nhập họ tên của bạn </label>
+                        <input style="Width:100%" type="text" name="name" value="" placeholder="Nhập Họ tên" required>
+                    </div>
+                @endif
+                <div class="form-group">
+                    <label for=""> Số điện thoại</label>
+                    <input style="Width:100%" type="text" name="phone" value="{{ request()->telephone }}" placeholder="Nhập số điện thoại" required>
+                </div>
+            @endauth
             <div class="form-group">
                 <label for=""> Ngày tháng năm sinh</label>
                 <input style="Width:100%" type="date" name="date" value="" placeholder="Nhập Họ tên" required>
             </div>
-            <!-- <div class="form-group">
-                <label for=""> Chọn theo Chuyên khoa </label>
-                <select name="service" id="">
-                    <option disable>Chọn theo Chuyên khoa</option>
-                    <option>Khám thai định kỳ</option>
-                    <option>Khám sức khỏe tiền hôn nhân</option>
-                    <option>Tiêm chủng</option>
-                </select>
-            </div> -->
             <div class="form-group">
                 <label for=""> Chọn ngày khám</label>
                 <input style="Width:100%" type="date" name="date" placeholder="Nhập Họ tên" required>
@@ -42,13 +55,22 @@
             </div>
             <div class="form-group">
             <label> Chọn dịch vụ khám</label>
-                <select>
+                <select name="service">
                    <option value="Gói khám sức khỏe phụ nữ tổng quát">Gói khám sức khỏe phụ nữ tổng quát</option>
                    <option value="Chăm sóc, tư vẫn trước sinh">Chăm sóc, tư vẫn trước sinh</option>
                    <option value="Khám và điều trị các bệnh phụ khoa">Khám và điều trị các bệnh phụ khoa</option>
                    <option value="Sàng lọc ung thư phụ khoa">Sàng lọc ung thư phụ khoa</option>
                 </select>
-            </div>  
+            </div>
+            <div class="form-group">
+                <label> Chọn bác sỹ</label>
+                <select name="doctor_id">
+                    <option value="">Chọn bác sỹ</option>
+                    @foreach($doctors as $doctor)
+                        <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
+                    @endforeach
+                </select>
+            </div>
             <button type="submit">
                 Đặt lịch ngay
             </button>

@@ -25,7 +25,10 @@ Route::get('doctor', [HomeController::class, 'doctors'])->name('doctor');
 Route::get('doctor_detail/{id}', [HomeController::class, 'doctor_detail'])->name('doctor_detail');
 Route::get('dichvu', [HomeController::class, 'dichvu'])->name('dichvu');
 Route::get('lienhe', [HomeController::class, 'contact'])->name('lienhe');
-Route::get('lichsukham', [HomeController::class, 'history'])->name('lichsukham');
 Route::middleware('guest:customer')->namespace('Frontend')->name('frontend.')->group(function (){
     Route::post('customer/login', [\App\Http\Controllers\Frontend\LoginController::class, 'login'])->name('customer.login');
+});
+Route::middleware('auth:customer')->namespace('Frontend')->name('frontend.')->group(function () {
+    Route::get('lichsukham', [HomeController::class, 'history'])->name('lichsukham');
+    Route::get('customer/logout', [\App\Http\Controllers\Frontend\LoginController::class, 'logout'])->name('customer.logout');
 });

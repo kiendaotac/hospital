@@ -18,8 +18,8 @@
                     <div class="switch-lang ">
                         <a class="text-white pointer">Xin chào! {{ \Illuminate\Support\Facades\Auth::guard('customer')->user()->name }} <img width="10px" src="{{asset("assets/images/icon-down.png")}}" )}}"></a>
                     <ul>
-                    <li><a href="{{route('lichsukham')}}">Lịch sử khám</a> </li>
-                      <li><a>Thoát</a></li>
+                    <li><a href="{{route('frontend.lichsukham')}}">Lịch sử khám</a> </li>
+                    <li><a href="{{ route('frontend.customer.logout') }}">Thoát</a></li>
                     </ul>
                       </div>
                 @else

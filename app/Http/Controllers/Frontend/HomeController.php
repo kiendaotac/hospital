@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Appointment;
+use App\Models\Customer;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Stephenjude\FilamentBlog\Models\Post;
 use App\Models\Doctor;
 use Illuminate\Support\Str;
@@ -22,7 +24,6 @@ class HomeController extends Controller
         $phone = trim($request->telephone);
         $appointment = Appointment::where('phone', $phone)->first();
         $current = Carbon::parse('08:00');
-        (Carbon::parse('08:00')->addMinutes(15)->format('H:i'));
         $doctors = Doctor::all();
         return view('frontend.dangky', array(
             'appointment'=> $appointment,
@@ -31,9 +32,15 @@ class HomeController extends Controller
         ));
     }
     public function postdangky(Request $request){
-        $params = $request->only(['name', 'phone', 'dob', 'service']);
-        $params['time'] = Carbon::parse($request->date_pick . ' ' . $request->time_pick);
+        $params = $request->only(['name', 'phone', 'dob', 'service', 'doctor_id']);
+        $params['time'] = Carbon::parse($request->date . ' ' . $request->options);
         Appointment::create($params);
+        Customer::firstOrCreate(
+            ['phone' => $request->phone],
+            [
+                'name' => $request->name,
+                'password' => bcrypt(Carbon::parse($request->date)->format('dmY')) // vd: 15101992
+            ]);
         return redirect()->route('otp');
     }
     public function blogs(){
@@ -74,7 +81,12 @@ class HomeController extends Controller
 
     }
     public function history(){
-        return view('frontend.history');
+        $user = Auth::guard('customer')->user();
+        $user->load(['appointments' => function($q) {
+            $q->with('doctor')->latest();
+        }]);
+        $appointments = $user->appointments;
+        return view('frontend.history', compact('appointments'));
     }
     /**
      * Show the form for creating a new resource.
