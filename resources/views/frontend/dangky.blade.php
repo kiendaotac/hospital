@@ -76,7 +76,7 @@
     <script>
         $(document).ready(function () {
             $('#date-appointment').on('change', function () {
-                if (!(new Date($(this).val())).getDate() % 6) {
+                if (!(new Date($(this).val())).getDay() % 6) {
                     $('.weekend').removeClass('disable')
                 } else {
                     $('.weekend').addClass('disable')
