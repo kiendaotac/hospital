@@ -36,20 +36,22 @@
                 <input style="Width:100%" type="date" name="date" value="" placeholder="Nhập Họ tên" required>
             </div>
             <div class="form-group">
-                <label for=""> Chọn ngày khám</label>
-                <input style="Width:100%" type="date" name="date" placeholder="Nhập Họ tên" required>
+                <label for="date-appointment"> Chọn ngày khám</label>
+                <input style="Width:100%" id="date-appointment" type="date" name="date" placeholder="Nhập Họ tên" required>
             </div>
             <div class="form-group time">
                 <label> Chọn giờ khám</label>
                 @php
                 $starTime = now()->setTime(8,0);
-                $endTime = now()->setTime(18, 0);
+                $endTime = now()->setTime(20, 30);
                 $index = 0;
                 @endphp
                 @while($starTime->lessThanOrEqualTo($endTime))
-                <input type="radio" class="btn-check" id="option-{{ $index }}" name="options" autocomplete="off"
-                    value="{{($starTime->format('H:i'))}}" />
-                <label class="btn btn-secondary" for="option-{{ $index++ }}">{{($starTime->format('H:i'))}}</label>
+                    @if(!$starTime->between(now()->setTime(11, 31), now()->setTime(12, 59)))
+                        <input type="radio" class="btn-check" id="option-{{ $index }}" name="options" autocomplete="off"
+                               value="{{($starTime->format('H:i'))}}" />
+                        <label class="btn btn-secondary {{ $starTime->lessThan(now()->setTime(16, 30)) ? 'weekend' : '' }}" for="option-{{ $index++ }}">{{($starTime->format('H:i'))}}</label>
+                    @endif
                 @php($starTime->addMinutes(15))
                 @endwhile
             </div>
@@ -62,15 +64,6 @@
                    <option value="Sàng lọc ung thư phụ khoa">Sàng lọc ung thư phụ khoa</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label> Chọn bác sỹ</label>
-                <select name="doctor_id">
-                    <option value="">Chọn bác sỹ</option>
-                    @foreach($doctors as $doctor)
-                        <option value="{{ $doctor->id }}">{{ $doctor->name }}</option>
-                    @endforeach
-                </select>
-            </div>
             <button type="submit">
                 Đặt lịch ngay
             </button>
@@ -78,3 +71,17 @@
     </div>
 </div>
 @endsection
+
+@push('js')
+    <script>
+        $(document).ready(function () {
+            $('#date-appointment').on('change', function () {
+                if (!(new Date($(this).val())).getDate() % 6) {
+                    $('.weekend').removeClass('disable')
+                } else {
+                    $('.weekend').addClass('disable')
+                }
+            })
+        })
+    </script>
+@endpush
