@@ -32,7 +32,7 @@ class HomeController extends Controller
         ));
     }
     public function postdangky(Request $request){
-        $params = $request->only(['name', 'phone', 'dob', 'service', 'doctor_id']);
+        $params = $request->only(['name', 'phone', 'dob', 'service']);
         $params['time'] = Carbon::parse($request->date . ' ' . $request->options);
         Appointment::create($params);
         Customer::firstOrCreate(

@@ -70,6 +70,7 @@
     <a href="" target="_blank">
         <img src="{{asset("assets/images/icon-chat.png")}}" class="icon-chat-facebook">
     </a>
+@stack('js')
 </body>
 
 </html>

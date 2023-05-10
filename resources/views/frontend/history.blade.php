@@ -8,8 +8,7 @@
                 <li>
                     <div class="direction-{{ $loop->odd ? 'l' : 'r' }}">
                         <div class="flag-wrapper">
-                            <span class="flag">{{ $appointment->doctor->name ?? 'Chưa đặt bác sỹ' }}</span>
-                            <span class="time-wrapper"><span class="time">{{ $appointment->time }}</span></span>
+                            <span class="flag">{{ $appointment->time->format('d/m/Y H:i') }}</span>
                         </div>
                         <div class="desc">{{ $appointment->service }}</div>
                     </div>
