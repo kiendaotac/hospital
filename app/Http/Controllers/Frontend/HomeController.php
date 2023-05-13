@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Enums\StatusEnum;
+use App\Events\CustomerMakeAppointment;
+use App\Events\CustomerRegistered;
 use App\Http\Controllers\Controller;
 use App\Models\Appointment;
 use App\Models\Customer;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Seshac\Otp\Otp;
 use Stephenjude\FilamentBlog\Models\Post;
 use App\Models\Doctor;
 use Illuminate\Support\Str;
@@ -27,23 +31,33 @@ class HomeController extends Controller
         $appointment = Appointment::where('phone', $phone)->first();
         $current = Carbon::parse('08:00');
         $doctors = Doctor::all();
+
         return view('frontend.dangky', array(
-            'appointment'=> $appointment,
-            'current'=>     $current,
-            'doctors' => $doctors
+            'appointment' => $appointment,
+            'current'     => $current,
+            'doctors'     => $doctors
         ));
     }
     public function postdangky(Request $request){
-        $params = $request->only(['name', 'phone', 'dob', 'service']);
+        $params         = $request->only(['name', 'phone', 'dob', 'service']);
         $params['time'] = Carbon::parse($request->date . ' ' . $request->options);
-        Appointment::create($params);
-        Customer::firstOrCreate(
-            ['phone' => $request->phone],
-            [
-                'name' => $request->name,
-                'password' => bcrypt(Carbon::parse($request->date)->format('dmY')) // vd: 15101992
-            ]);
-        return redirect()->route('otp');
+        $appointment    = Appointment::create($params);
+        $customer       = Customer::where('phone', $request->phone)->first();
+        if ($customer) {
+            CustomerMakeAppointment::dispatch($customer, $appointment);
+            return redirect()->route('home');
+        } else {
+            $customer = Customer::create(
+                [
+                    'phone'    => $request->phone,
+                    'email'    => $request->email,
+                    'name'     => $request->name,
+                    'password' => bcrypt(Carbon::parse($request->date)->format('dmY')), // vd: 15101992
+                    'status'   => StatusEnum::INACTIVE->value
+                ]);
+            CustomerRegistered::dispatch($customer);
+            return redirect()->route('otp', compact('customer'));
+        }
     }
     public function blogs(){
         $blogs = Post::published()->get();
@@ -66,9 +80,31 @@ class HomeController extends Controller
         $telephone = $request->telephone;
         return redirect()->route('dangky',  compact('telephone'));
     }
-    public function otp(){
-        return view('frontend.otp');
 
+    public function otp(Request $request, Customer $customer)
+    {
+        abort_unless(!!$customer, '401', 'Khách hàng không tồn tại');
+
+        return view('frontend.otp', compact('customer'));
+    }
+    public function postOtp(Request $request)
+    {
+        $request->validate([
+            'id'  => ['required', 'numeric', 'min:1'],
+            'otp' => ['required']
+        ]);
+        $data     = $request->only(['id', 'otp']);
+        $customer = Customer::find($data['id']);
+        if (!$customer) {
+            return redirect()->back()->withErrors(['customer' => 'Khách hàng không tồn tại']);
+        }
+        $verify = Otp::validate($customer->email, $data['otp']);
+        if (!$verify->status) {
+            return redirect()->back()->withErrors(['otp' => $verify->message]);
+        }
+        $customer->update(['status' => StatusEnum::ACTIVE->value]);
+
+        return view('frontend.success');
     }
     public function gioithieu(){
         return view('frontend.about');
