@@ -34,7 +34,7 @@
                         </div> -->
                     </div>
                     <div class="col-md-8">
-                        <h2 class="page-title">{{$doctor->name}}</h2>
+                        <h2 class="page-title b700" >{{$doctor->name}}</h2>
                         <div class="list-info">
                             <table cellpadding="10">
                                 <tbody>

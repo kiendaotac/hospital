@@ -41,7 +41,7 @@
                             X
                         </button>
                         <div class="modal-body">
-                            <h2 class="modal-title">
+                            <h2 class="modal-title b700">
                                 Giờ làm việc
                             </h2>
                             <p>
@@ -88,7 +88,7 @@
                             X
                         </button>
                         <div class="modal-body">
-                            <h2 class="modal-title">
+                            <h2 class="modal-title b700">
                                 Đăng ký lịch khám
                             </h2>
                             <div class="appointment-form-popup">
@@ -122,8 +122,8 @@
                             X
                         </button>
                         <div class="modal-body">
-                            <h2 class="modal-title">
-                                Chi nhánh Phụ sản Tina
+                            <h2 class="modal-title b700">
+                                Hệ thống Phụ sản Tina
                             </h2>
                             <div class="row">
                                 <div class="col-md-6">
@@ -145,15 +145,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item item-4">
-                <a href="" target="_blank">
-                    <img class="normal" src="{{asset("assets/images/icon-4.svg")}}">
-                    <img class="active" src="{{asset("assets/images/icon-4-active.svg")}}">
-                    <span class="pl-3">
-                        Hòm thư góp ý
-                    </span>
-                </a>
-            </div>
+      
         </div>
     </div>
 </div>
@@ -164,7 +156,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="">
-                    <h1 class="fs30 b600 text-uppercase">
+                    <h1 class="fs30 b700 text-uppercase">
                         DỊCH VỤ
                         <br>
                         PHỤ SẢN TINA
@@ -278,7 +270,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="fs28 b600 text-white text-uppercase mb-5">
+                <h2 class="fs28 b700 text-white text-uppercase mb-5">
                     Số Liệu nổi bật
                 </h2>
                 <div class="blog-1">
@@ -380,7 +372,7 @@
 <div class="section-4">
     <div class="container">
         <div class="d-flex jcs aic pb-2 w-100" style="border-bottom: 1px solid #2F4857;">
-            <h2 class="fs28 b600 text-uppercase ls2 mb-0">
+            <h2 class="fs28 b700 text-uppercase ls2 mb-0">
                 tin tức hoạt động
             </h2>
             <p class="mb-0">
@@ -391,8 +383,12 @@
         </div>
         <div class="row mt-4">
             @foreach($posts as $post )
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4 post-item">
                 <div class="ovh">
+                    <div class="date">
+                        <span>{{Carbon\Carbon::parse($post->created_at)->format('d')}}</span>
+                        <span>{{Carbon\Carbon::parse($post->created_at)->format('M')}}</span>
+                    </div>
                     <a href="{{route('post',$post->slug)}}">
                         <img data-src="{{$post->banner_url}}" class="img-zoom lazy"
                             src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==">
@@ -414,40 +410,7 @@
 </div>
 <div class="clearfix">
 </div>
-<div class="partners">
-    <div class="container">
-        <div class="list-partner owl-carousel owl-theme owl-loaded owl-drag">
-            <div class="item">
-                <img data-src="{{asset("assets/images/groupa-logo2.png" )}}" alt="" class="owl-lazy">
-            </div>
-            <div class="item">
-                <img data-src="{{asset("assets/images/healix-logo2.png" )}}" alt="" class="owl-lazy">
-            </div>
-            <div class="item">
-                <img data-src="{{asset("assets/images/heathycare-logo2.png" )}}" alt="" class="owl-lazy">
-            </div>
-            <div class="item">
-                <img data-src="{{asset("assets/images/henner-logo2.png" )}}" alt="" class="owl-lazy">
-            </div>
-            <div class="item">
-                <img data-src="{{asset("assets/images/img-logo2.png" )}}" alt="" class="owl-lazy">
-            </div>
 
-            <div class="item">
-                <img data-src="{{asset("assets/images/inslink-logo2.png" )}}" alt="" class="owl-lazy">
-            </div>
-
-            <div class="item">
-                <img data-src="{{asset("assets/images/insmart-logo2.png" )}}" alt="" class="owl-lazy">
-            </div>
-
-            <div class="item">
-                <img data-src="{{asset("assets/images/inter-logo2.png" )}}" alt="" class="owl-lazy">
-            </div>
-        </div>
-
-    </div>
-</div>
 <div>
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6645603591746!2d106.65425467558968!3d10.836961889315527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529a0c3cfcb85%3A0x491224bfa9033145!2zNzM4IFF1YW5nIFRydW5nLCBQaMaw4budbmcgOCwgR8OyIFbhuqVwLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1682176344410!5m2!1svi!2s"

@@ -428,22 +428,15 @@
             </ul>
         </div>
         <div class="mobile-meta 22">
-            <!-- <span class="search-form-tigger" data-toggle="search-form">
-                <i class="fa fa-search" aria-hidden="true">
-                </i>
-              </span> -->
-            <div class="search-form-wrapper">
-                <form id="searchform" class="d-flex" method="get" action="#">
-                    <input type="text" class="search-field" name="s" placeholder="Tìm kiếm" value="">
-                    <button>
-                        <i class="fa fa-search" aria-hidden="true">
-                        </i>
-                    </button>
-                </form>
+            <span class="search-form-tigger" data-toggle="search-form">
+            <div data-toggle="modal" data-target="#exampleModal" class="item item-1">
+            <img src="{{asset("assets/images/time-management.png")}}">
             </div>
+                                    
+              </span>
+          
         </div>
         <div class="switch-lang-mobile">
-
         </div>
     </div>
 </div>

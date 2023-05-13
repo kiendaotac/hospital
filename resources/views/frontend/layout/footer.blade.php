@@ -8,9 +8,8 @@
                     </a>
                 </div>
                 <p class=" mt-2 mb-2" style="    text-align: justify;">
-                    Phòng khám sản phụ khoa Tina còn được trang bị hệ thống máy móc hiện đại như máy siêu âm, máy chụp
-                    X-quang, máy điện tim và các thiết bị khác giúp cho việc chẩn đoán và điều trị các bệnh lý phụ khoa
-                    được dễ dàng và chính xác hơn.
+MST/ĐKKD/QĐTL: 0106699074 - Sở Kế hoạch và Đầu tư thành phố Hà Nội cấp ngày 05/06/2003<br>
+Giấy phép hoạt động cơ sở khám chữa bệnh số 002960/HNO - CCHN. Ngày cấp: 27/11/2012
                 </p>
 
             </div>
@@ -52,7 +51,7 @@
             </div>
             <div class="col-md-4">
                 <div class="footer-title">
-                    Liên hệ hợp tác
+                    Liên hệ
                 </div>
                 <form>
                     <div class="form-group">
@@ -86,7 +85,7 @@
     
     <div class="nav-right"> 
     <div data-toggle="modal" data-target="#exampleModal3" class="item item-2">
-    Đăng ký lịch khám
+    Đặt lịch khám
 
             </div>
             <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -98,7 +97,7 @@
                         </button>
                         <div class="modal-body">
                             <h2 class="modal-title">
-                                Đăng ký lịch khám
+                                Đặt lịch khám
                             </h2>
                             <div class="appointment-form-popup">
                                 <form action="{{route('nhaptelephone')}}">

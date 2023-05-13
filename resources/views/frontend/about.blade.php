@@ -4,7 +4,7 @@
         src="{{asset("assets/images/banner-page.jpg")}}"
         class="w-100"></div>
 <div class="container">
-<h2 class="page-title">Giới thiệu</h2>
+<h2 class="page-title b700">Giới thiệu</h2>
     <div class="row">
         <div class="col-md-12">
         <h6 class="18 fs20 b600"> PHÒNG KHÁM SẢN PHỤ KHOA TINA</h6>

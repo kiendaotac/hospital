@@ -9,7 +9,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8">
-            <h2 class="page-title">Đội ngũ chuyên gia</h2>
+            <h2 class="page-title b700" >Đội ngũ chuyên gia</h2>
             <p style="    text-align: justify;">Phòng Khám Sản Phụ Khoa TINA là nơi quy tụ của đội ngũ y bác sĩ chuyên khoa tài giỏi, giàu kinh nghiệm chuyên môn, đã và đang công tác tại những bệnh viện Từ Dũ, Hùng Vương.</p>
             <div class="list-doctor">
               @foreach($doctors as $doctor)

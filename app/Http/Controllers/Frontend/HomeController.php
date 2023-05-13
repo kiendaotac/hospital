@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Stephenjude\FilamentBlog\Models\Post;
 use App\Models\Doctor;
 use Illuminate\Support\Str;
+\Carbon\Carbon::setLocale('vi');
+
 class HomeController extends Controller
 {
     /**

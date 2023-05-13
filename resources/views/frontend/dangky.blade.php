@@ -52,7 +52,7 @@
                                value="{{($starTime->format('H:i'))}}" />
                         <label class="btn btn-secondary {{ $starTime->lessThan(now()->setTime(16, 30)) ? 'weekend' : '' }}" for="option-{{ $index++ }}">{{($starTime->format('H:i'))}}</label>
                     @endif
-                @php($starTime->addMinutes(15))
+                @php($starTime->addMinutes(30))
                 @endwhile
             </div>
             <div class="form-group">

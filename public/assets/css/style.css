@@ -635,7 +635,7 @@ body.home .list-partner .owl-next {
 }
 
 .section-1 .content .item {
-	width: 25%;
+	width: 33.333333333%;
 	text-align: center;
 	cursor: pointer;
 	height: 100%;
@@ -997,9 +997,6 @@ footer {
 		margin: 0px 5px;
 	}
 
-	.mobile-meta {
-		right: 105px !important;
-	}
 }
 
 .page-form {
@@ -2152,6 +2149,7 @@ body.page-template-faqs .card .card-header {
 
 .normal-post {
 	margin-top: 40px;
+	position: relative;
 }
 
 .normal-post h4 {
@@ -2877,7 +2875,7 @@ body.category .pagination a.prev {
 }
 
 .mobile-meta img {
-	width: 20px;
+	width: 30px;
 }
 
 .button_container.active .top {
@@ -3256,8 +3254,13 @@ body.page-template-homepage-beta a.more {
 	z-index: 999999;
 }
 
-
+@media (max-width:1024px) {
+	.sticky{
+		height: 130px;
+	}
+  }
 @media(min-width: 992px) AND (max-width: 1024px) {
+	
 	.wrap-header {
 		/*overflow-x: hidden;*/
 		display: none !important;
@@ -3289,9 +3292,6 @@ body.page-template-homepage-beta a.more {
 		list-style-type: none;
 	}
 
-	.mobile-meta {
-		right: 105px !important;
-	}
 }
 
 @media(max-width: 992px) {
@@ -3336,6 +3336,7 @@ body.page-template-homepage-beta a.more {
 	.section-1 .content .item {
 		width: 50%;
 		margin-bottom: 10px;
+		display: none;
 	}
 
 	.section-1 .content .item-2:after,
@@ -3765,9 +3766,6 @@ body.page-template-homepage-beta a.more {
 		list-style-type: none;
 	}
 
-	.mobile-meta {
-		right: 92px;
-	}
 
 	.switch-lang-mobile img {
 		width: 30px;
@@ -3927,9 +3925,9 @@ body.page-template-homepage-beta a.more {
 
 @media (max-width:1024px) {
 	.logo-top {
-		height: 55px;
 		display: block;
 		margin: auto;
+		width: 60px;
 	}
 }
 
@@ -3968,8 +3966,8 @@ body.page-template-homepage-beta a.more {
 	}
 
 	.footer .logo img {
-		width: auto;
-		height: 55px;
+		width: 60px;
+		
 	}
 }
 
@@ -4168,6 +4166,9 @@ body.page-template-homepage-beta a.more {
 	background-color: #ffffff;
 	border: 1px solid #0035ff;
 }
+.form-group.time .btn.disable{
+	display: none;
+}
 .modal-login .modal-content{
 	background: #fff;
     color: #000;
@@ -4218,6 +4219,7 @@ margin-bottom: 15px;
 max-width: 300px;
     margin: 10px auto;
 }
+
 
 
 /* ================ The Timeline ================ */
@@ -4371,7 +4373,9 @@ max-width: 300px;
 	float: right;
   }
   
-
+  .time {
+	display: inline-block;
+  }
   
   .desc {
 	margin: 1em 0.75em 0 0;
@@ -4495,3 +4499,27 @@ max-width: 300px;
   .modal-open .modal{
 	overflow-y: hidden;
   }
+  .post-item .date{
+	position: absolute;
+	left: 0;
+	top: 10px;
+    z-index: 1;
+    border: 2px solid #ee4668;
+	background: #ffffffff;
+    text-align: center;
+    padding: 5px;
+    line-height: 1;
+    font-size: 14px;
+	color: #ee4668;
+	transition: 0.25s;
+  }
+  .post-item .date span{
+	display: block;
+  }
+  .post-item:hover .date{
+	background-color: #ee4668;
+	color: #ffffff;
+  }
+  .post-item:hover .green-link{
+	color: #ee4668;
+}
