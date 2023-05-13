@@ -14,6 +14,10 @@
                     <label for=""> Số điện thoại</label>
                     <input style="Width:100%" type="text" name="phone" value="{{ auth('customer')->user()->phone }}" placeholder="Nhập số điện thoại" required>
                 </div>
+                <div class="form-group">
+                    <label for=""> Email</label>
+                    <input style="Width:100%" type="email" name="email" value="{{ auth('customer')->user()->email }}" placeholder="Nhập địa chỉ email" required>
+                </div>
             @else
                 @if($appointment)
                     <div class="form-group">
@@ -30,10 +34,14 @@
                     <label for=""> Số điện thoại</label>
                     <input style="Width:100%" type="text" name="phone" value="{{ request()->telephone }}" placeholder="Nhập số điện thoại" required>
                 </div>
+                <div class="form-group">
+                    <label for=""> Email</label>
+                    <input style="Width:100%" type="email" name="email" value="" placeholder="Nhập địa chỉ email" required>
+                </div>
             @endauth
             <div class="form-group">
                 <label for=""> Ngày tháng năm sinh</label>
-                <input style="Width:100%" type="date" name="date" value="" placeholder="Nhập Họ tên" required>
+                <input style="Width:100%" type="date" name="dob" value="" placeholder="Nhập Họ tên" required>
             </div>
             <div class="form-group">
                 <label for="date-appointment"> Chọn ngày khám</label>

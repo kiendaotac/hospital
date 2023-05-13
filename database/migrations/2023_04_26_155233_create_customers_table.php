@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('phone', 20)->unique();
+            $table->string('email')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->enum('status', \App\Enums\StatusEnum::toArray())->default(\App\Enums\StatusEnum::ACTIVE->value);
             $table->timestamps();
         });
     }

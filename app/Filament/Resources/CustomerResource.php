@@ -30,6 +30,7 @@ class CustomerResource extends Resource
             ->schema([
                 TextInput::make('name')->required()->label(trans('filament-user::user.resource.name')),
                 TextInput::make('phone')->required()->label(trans('phone'))->numeric(),
+                TextInput::make('email')->required()->label(trans('email'))->email(),
                 Forms\Components\TextInput::make('password')->label(trans('filament-user::user.resource.password'))
                     ->password()
                     ->maxLength(255)
@@ -53,6 +54,7 @@ class CustomerResource extends Resource
                 TextColumn::make('id')->sortable()->label(trans('filament-user::user.resource.id')),
                 TextColumn::make('name')->sortable()->searchable()->label(trans('filament-user::user.resource.name')),
                 TextColumn::make('phone')->sortable()->searchable()->label(trans('phone')),
+                TextColumn::make('email')->sortable()->searchable()->label(trans('email')),
                 Tables\Columns\TextColumn::make('created_at')->label(trans('filament-user::user.resource.created_at'))
                     ->dateTime('M j, Y')->sortable(),
                 Tables\Columns\TextColumn::make('updated_at')->label(trans('filament-user::user.resource.updated_at'))
