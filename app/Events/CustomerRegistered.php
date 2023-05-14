@@ -10,12 +10,14 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Seshac\Otp\Otp;
 
 class CustomerRegistered
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public Customer $customer;
+    public $otp;
 
     /**
      * Create a new event instance.
@@ -23,6 +25,7 @@ class CustomerRegistered
     public function __construct(Customer $customer)
     {
         $this->customer = $customer;
+        $this->otp      = Otp::generate($customer->email);
     }
 
     /**

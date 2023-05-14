@@ -27,7 +27,7 @@ class SendOtpViaEmailNotification
     {
         $customer = $event->customer;
         if ($customer->status == StatusEnum::INACTIVE->value && !empty($customer->email)) {
-            $otp =  Otp::generate($customer->email);
+            $otp =  $event->otp;
             if ($otp->status) {
                 Mail::to($customer)->send(new \App\Mail\CustomerRegistered($otp->token));
             } else {
