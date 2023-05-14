@@ -23,7 +23,7 @@ class SendNotifyAppointmentViaEmailNotification
     public function handle(CustomerMakeAppointment $event): void
     {
         $appointment = $event->appointment;
-        $customer = $event->customer;
+        $customer    = $event->customer;
         Mail::to($customer)->send(new \App\Mail\CustomerMakeAppointment($appointment));
     }
 }

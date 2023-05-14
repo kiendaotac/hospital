@@ -5,7 +5,9 @@ namespace App\Providers;
 use App\Events\CustomerMakeAppointment;
 use App\Events\CustomerRegistered;
 use App\Listeners\SendNotifyAppointmentViaEmailNotification;
+use App\Listeners\SendNotifyAppointmentViaSmsNotification;
 use App\Listeners\SendOtpViaEmailNotification;
+use App\Listeners\SendOtpViaSmsNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -23,10 +25,12 @@ class EventServiceProvider extends ServiceProvider
             SendEmailVerificationNotification::class,
         ],
         CustomerRegistered::class => [
-            SendOtpViaEmailNotification::class
+            SendOtpViaEmailNotification::class,
+            SendOtpViaSmsNotification::class,
         ],
         CustomerMakeAppointment::class => [
-            SendNotifyAppointmentViaEmailNotification::class
+            SendNotifyAppointmentViaEmailNotification::class,
+            SendNotifyAppointmentViaSmsNotification::class
         ]
     ];
 
