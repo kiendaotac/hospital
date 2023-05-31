@@ -4,12 +4,13 @@
             <div class="col-md-4">
                 <div class="logo">
                     <a href="{{route('home')}}">
-                        <img src="{{asset("assets/images/logo-tina.png")}}" width="80px" class="logo-footer d-block">
+                        <img src="{{asset("assets/images/logo-tina.png")}}" class="logo-footer d-block">
                     </a>
                 </div>
                 <p class=" mt-2 mb-2" style="    text-align: justify;">
-MST/ĐKKD/QĐTL: 0106699074 - Sở Kế hoạch và Đầu tư thành phố Hà Nội cấp ngày 05/06/2003<br>
-Giấy phép hoạt động cơ sở khám chữa bệnh số 002960/HNO - CCHN. Ngày cấp: 27/11/2012
+                Hệ thống phòng khám sản phụ khoa IVF TINA <br>
+GPĐKKD:0315396563 do Sở Kế hoạch và Đầu tư thành phố Hồ Chí Minh cấp ngày 29/3/2023.
+<!-- Giấy phép hoạt động cơ sở khám chữa bệnh số 002960/HNO - CCHN. Ngày cấp: 27/11/2012 -->
                 </p>
 
             </div>
@@ -33,14 +34,14 @@ Giấy phép hoạt động cơ sở khám chữa bệnh số 002960/HNO - CCHN.
                         </p>
                     </div>
                     <div class="social-footer">
-                        <a href=" https://bit.ly/42e6ZcP">
+                        <a href=" https://www.facebook.com/phusantina">
                             <img src="{{asset("assets/images/fb.svg")}}" alt="">
                         </a>
-                        <a href="http://bit.ly/3ZP02O0">
+                        <a href="https://www.tiktok.com/@phusantina">
                             <img src="{{asset("assets/images/icon-tiktok.png")}}" alt="">
                         </a>
-                        <a href="##">
-                            <img src="{{asset("assets/images/LinkedIN.svg")}}" alt="">
+                        <a href="https://www.youtube.com/@phusantina/featured">
+                            <img src="{{asset("assets/images/icon-ytb.png")}}" alt="">
                         </a>
                         <a href="##">
                             <img src="{{asset("assets/images/instagram.svg")}}" alt="">
@@ -74,7 +75,7 @@ Giấy phép hoạt động cơ sở khám chữa bệnh số 002960/HNO - CCHN.
 
     </div>
     <div class="text-center text-white copy-right" style="padding: 8px 0px; background-color: #ee4668;">
-        Copyright @2023 by <a href="tel:0979397973">CongPV<a>
+    Copyright @2023. Quản lý bởi CÔNG TY TNHH TRUNG TÂM Y KHOA CHẤT LƯỢNG CAO US HEALTHCARE
     </div>
 
     <img src="{{asset("assets/images/icon-21.svg")}}" class="gototop">
@@ -85,7 +86,7 @@ Giấy phép hoạt động cơ sở khám chữa bệnh số 002960/HNO - CCHN.
     
     <div class="nav-right"> 
     <div data-toggle="modal" data-target="#exampleModal3" class="item item-2">
-    Đặt lịch khám
+        <a>Đặt lịch khám</a>
 
             </div>
             <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

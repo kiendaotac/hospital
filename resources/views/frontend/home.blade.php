@@ -2,10 +2,9 @@
 @section('content')
 <div class="bts-popup" role="alert">
     <div class="bts-popup-container">
-        <p>Đặt lịch khám ngay tại đây</p>
         <form action="{{route('nhaptelephone')}}">
             <div class="form-group">
-                <input style="Width:100%" type="telephone" name="telephone" value=""
+                <input type="telephone" name="telephone" value=""
                     placeholder="Nhập Số điện thoại để đặt lịch" required>
             </div>
 
@@ -77,7 +76,7 @@
                 <img class="normal" src="{{asset("assets/images/icon-5.svg")}}">
                 <img class="active" src="{{asset("assets/images/icon-5-active.svg")}}">
                 <span class="pl-3">
-                    Đăng ký lịch khám
+                    Đặt lịch khám
                 </span>
             </div>
             <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -163,10 +162,10 @@
                     </h1>
                     <p style="text-align: justify">
                         Thăm khám và điều trị tại Phụ Sản Tina, khách hàng sẽ được
-                        trải nghiệm các dịch vụ chăm sóc sức khỏe chất lương cao đạt tiêu chuẩn
+                        trải nghiệm các dịch vụ chăm sóc sức khỏe chất lượng cao đạt tiêu chuẩn
                         quốc tế.
                     </p>
-                    <a class="read-more" href="#">Tìm hiểu thêm</a>
+                    <a class="read-more" href="{{route('gioithieu')}}">Tìm hiểu thêm</a>
                 </div>
             </div>
             <div class="col-md-9">
@@ -184,7 +183,7 @@
                             <img src="{{asset("assets/images/icon-9.svg")}}" style="width: 28px;">
                             <a href="#kham-tai-nha-bv-hong-ngoc" class="pl-2">
                                 <span class="mb-1 fs18 green-link">
-                                    Chăm sóc, tư vẫn trước sinh
+                                    Chăm sóc, tư vấn trước sinh
                                 </span>
                             </a>
                         </div>
@@ -280,7 +279,7 @@
                             <div class="pl-3">
                                 <p class="fs30 b600 text-white mb-0 funfacts" id="num1" style="line-height: 45px;"
                                     max="19" time="2">
-                                    19
+                                    1
                                 </p>
                                 <p class="mb-0 text-white fs16">
                                     Năm thành lập
@@ -294,7 +293,7 @@
                             <div class="pl-3">
                                 <p class="fs30 b600 text-white mb-0 funfacts" max="206" time="3"
                                     style="line-height: 45px;">
-                                    206
+                                    7
                                 </p>
                                 <p class="mb-0 text-white fs16">
                                     Chuyên gia
@@ -308,7 +307,7 @@
                             <div class="pl-3">
                                 <p class="fs30 b600 text-white mb-0 " style="line-height: 45px;">
                                     <span>
-                                        1.821.000
+                                        0
                                     </span>
                                 </p>
                                 <p class="mb-0 text-white fs16">
@@ -323,7 +322,7 @@
                             <div class="pl-3">
                                 <p class="fs30 b600 text-white mb-0 funfacts" max="7" time="2"
                                     style="line-height: 45px;">
-                                    7
+                                    1
                                 </p>
                                 <p class="mb-0 text-white fs16">
                                     Cơ sở
@@ -341,11 +340,11 @@
                         cũng như toàn khu vực miền Nam.
                     </p>
                     <div class="d-flex wrap-doctor" style="align-items: flex-end;">
-                        <img style="max-width: 200px" src="{{asset("assets/images/gs-nguyen-van-thang-6407.jpg")}}">
+                    <img style="max-width: 200px" src="{{asset("assets/images/Bac-si-Nhat.jpg")}}">
                         <div class="pl-3">
                             <div style="border-bottom: 1px solid #FFFFFF;">
                                 <p class="fs18 text-uppercase b600 text-white mb-0">
-                                    TTƯT. BSCK II
+                                    ThS, BS HỒ QUANG NHẬT
                                 </p>
                                 <p class="text-white">
                                     Giám đốc Phòng khám Phụ sản Tina

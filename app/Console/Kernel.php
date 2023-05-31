@@ -12,6 +12,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
+        $schedule->command('tina:notify-appointment')->daily()->at('09:00');
         // $schedule->command('inspire')->hourly();
     }
 

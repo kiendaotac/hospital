@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Enums\StatusEnum;
 use App\Filament\Resources\CustomerResource\Pages;
 use App\Filament\Resources\CustomerResource\RelationManagers;
 use App\Models\Customer;
@@ -31,6 +32,16 @@ class CustomerResource extends Resource
                 TextInput::make('name')->required()->label(trans('filament-user::user.resource.name')),
                 TextInput::make('phone')->required()->label(trans('phone'))->numeric(),
                 TextInput::make('email')->required()->label(trans('email'))->email(),
+                Forms\Components\DatePicker::make('dob'),
+                Forms\Components\Select::make('gender')
+                    ->label('Giới tính')
+                    ->required()
+                    ->default(1)
+                    ->options([
+                        0 => 'Nữ',
+                        1=> 'Nam'
+                    ]),
+                Forms\Components\Textarea::make('address'),
                 Forms\Components\TextInput::make('password')->label(trans('filament-user::user.resource.password'))
                     ->password()
                     ->maxLength(255)
@@ -44,6 +55,7 @@ class CustomerResource extends Resource
                             return $user->password;
                         }
                     }),
+                Forms\Components\Select::make('status')->options(StatusEnum::toSelectOption())->default(StatusEnum::ACTIVE->value)
             ]);
     }
 
@@ -55,10 +67,17 @@ class CustomerResource extends Resource
                 TextColumn::make('name')->sortable()->searchable()->label(trans('filament-user::user.resource.name')),
                 TextColumn::make('phone')->sortable()->searchable()->label(trans('phone')),
                 TextColumn::make('email')->sortable()->searchable()->label(trans('email')),
-                Tables\Columns\TextColumn::make('created_at')->label(trans('filament-user::user.resource.created_at'))
-                    ->dateTime('M j, Y')->sortable(),
-                Tables\Columns\TextColumn::make('updated_at')->label(trans('filament-user::user.resource.updated_at'))
-                    ->dateTime('M j, Y')->sortable(),
+                Tables\Columns\TextColumn::make('dob'),
+                Tables\Columns\TextColumn::make('gender')->enum([
+                    0 => 'Nữ',
+                    1 => 'Nam'
+                ]),
+                Tables\Columns\TextColumn::make('address'),
+                Tables\Columns\TextColumn::make('status')
+//                Tables\Columns\TextColumn::make('created_at')->label(trans('filament-user::user.resource.created_at'))
+//                    ->dateTime('M j, Y')->sortable(),
+//                Tables\Columns\TextColumn::make('updated_at')->label(trans('filament-user::user.resource.updated_at'))
+//                    ->dateTime('M j, Y')->sortable(),
             ])
             ->filters([
                 //
