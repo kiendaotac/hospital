@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('phone', 20)->unique();
             $table->string('email')->nullable();
             $table->string('password');
+            $table->date('dob')->nullable();
+            $table->boolean('gender')->default(false);
+            $table->string('address')->nullable();
             $table->rememberToken();
             $table->enum('status', \App\Enums\StatusEnum::toArray())->default(\App\Enums\StatusEnum::ACTIVE->value);
             $table->timestamps();

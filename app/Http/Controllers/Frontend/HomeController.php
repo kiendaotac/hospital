@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Enums\StatusEnum;
+use App\Events\CustomerActived;
 use App\Events\CustomerMakeAppointment;
 use App\Events\CustomerRegistered;
 use App\Http\Controllers\Controller;
@@ -15,6 +16,7 @@ use Seshac\Otp\Otp;
 use Stephenjude\FilamentBlog\Models\Post;
 use App\Models\Doctor;
 use Illuminate\Support\Str;
+use Stephenjude\FilamentBlog\Models\Category;
 \Carbon\Carbon::setLocale('vi');
 
 class HomeController extends Controller
@@ -39,20 +41,27 @@ class HomeController extends Controller
         ));
     }
     public function postdangky(Request $request){
-        $params         = $request->only(['name', 'phone', 'dob', 'service']);
+        $params         = $request->only(['name', 'phone', 'dob', 'service', 'email']);
         $params['time'] = Carbon::parse($request->date . ' ' . $request->options);
         $appointment    = Appointment::create($params);
         $customer       = Customer::where('phone', $request->phone)->first();
         if ($customer) {
             CustomerMakeAppointment::dispatch($customer, $appointment);
-            return redirect()->route('home');
+            if (\auth('customer')->check()) {
+                return redirect()->route('frontend.lichsukham');
+            } else {
+                return redirect()->route('frontend.customer.getLogin')->with('welcome', '<h2>Cảm ơn bạn</h2> Bạn đã đăng ký lịch khám chữa bệnh tại HỆ THỐNG PHÒNG KHÁM SẢN PHỤ KHOA - IVF TINA. Bạn có thể đăng nhập để tra cứu thông tin ngày giờ khám. Sử dụng user và mật khẩu đăng nhập mặc định là ngày tháng năm sinh của bạn. VD: 30041975');
+            }
         } else {
             $customer = Customer::create(
                 [
                     'phone'    => $request->phone,
                     'email'    => $request->email,
                     'name'     => $request->name,
-                    'password' => bcrypt(Carbon::parse($request->date)->format('dmY')), // vd: 15101992
+                    'dob'      => $request->dob,
+                    'gender'   => $request->gender ?? 1,
+                    'address'  => $request->address,
+                    'password' => bcrypt(Carbon::parse($request->dob)->format('dmY')), // vd: 15101992
                     'status'   => StatusEnum::INACTIVE->value
                 ]);
             CustomerRegistered::dispatch($customer);
@@ -64,13 +73,30 @@ class HomeController extends Controller
         return view('frontend.blog', compact('blogs'));
     }
     public function post($slug){
+        $posts = Post::published()->latest()->take(10)->get();
         $post = Post::where('slug',$slug)->first();
-        return view('frontend.post_detail', compact('post'));
+        return view('frontend.post_detail', array(
+            'title' =>$post->title,
+            'description' =>$post->excerpt,
+            'post'     => $post,
+            'posts'     => $posts
+        ));
     }
-
+    public function getCategory($slug){
+        $category= Category::where('slug', $slug)->first();
+        $blogs = Post::where('blog_category_id',$category->id)->get();
+        return view('frontend.blog_category', array(
+            'category'     => $category,
+            'blogs'     => $blogs
+        ));
+    }
     public function doctors(){
         $doctors = Doctor::all();
-        return view('frontend.doctor', compact('doctors'));
+        $posts = Post::published()->latest()->take(10)->get();
+        return view('frontend.doctor', array(
+            'doctors'     => $doctors,
+            'posts'     => $posts
+        ));
     }
     public function doctor_detail($id){
         $doctor = Doctor::where('id',$id)->first();
@@ -103,8 +129,10 @@ class HomeController extends Controller
             return redirect()->back()->withErrors(['otp' => $verify->message]);
         }
         $customer->update(['status' => StatusEnum::ACTIVE->value]);
-
-        return view('frontend.success');
+        CustomerActived::dispatch($customer);
+        $appointment = Appointment::where('phone', $customer->phone)->latest()->first();
+        CustomerMakeAppointment::dispatch($customer, $appointment);
+        return redirect()->route('frontend.customer.getLogin')->with('welcome', '<h2>Cảm ơn bạn</h2> Bạn đã đăng ký lịch khám chữa bệnh tại HỆ THỐNG PHÒNG KHÁM SẢN PHỤ KHOA - IVF TINA. Bạn có thể đăng nhập để tra cứu thông tin ngày giờ khám. Sử dụng user và mật khẩu đăng nhập mặc định là ngày tháng năm sinh của bạn. VD: 30041975');
     }
     public function gioithieu(){
         return view('frontend.about');

@@ -2,13 +2,15 @@
 
 namespace App\Listeners;
 
-use App\Events\CustomerMakeAppointment;
+use App\Enums\StatusEnum;
+use App\Events\CustomerActived;
 use App\Jobs\SendEmailNotification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
-class SendNotifyAppointmentViaEmailNotification
+class SendWelcomeCustomerViaEmailNotification
 {
     /**
      * Create the event listener.
@@ -21,10 +23,9 @@ class SendNotifyAppointmentViaEmailNotification
     /**
      * Handle the event.
      */
-    public function handle(CustomerMakeAppointment $event): void
+    public function handle(CustomerActived $event): void
     {
-        $appointment = $event->appointment;
-        $customer    = $event->customer;
-        SendEmailNotification::dispatch($customer, new \App\Mail\CustomerMakeAppointment($appointment));
+        $customer = $event->customer;
+        SendEmailNotification::dispatch($customer, new \App\Mail\WelcomeNewCustomer($customer));
     }
 }

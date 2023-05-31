@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Enums\StatusEnum;
 use App\Events\CustomerRegistered;
+use App\Jobs\SendEmailNotification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Log;
@@ -29,7 +30,7 @@ class SendOtpViaEmailNotification
         if ($customer->status == StatusEnum::INACTIVE->value && !empty($customer->email)) {
             $otp =  $event->otp;
             if ($otp->status) {
-                Mail::to($customer)->send(new \App\Mail\CustomerRegistered($otp->token));
+                SendEmailNotification::dispatch($customer, new \App\Mail\CustomerRegistered($otp->token));
             } else {
                 Log::info('GENERATE_OTP_FAIL', [$otp]);
             }

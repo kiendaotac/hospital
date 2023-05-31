@@ -156,7 +156,7 @@ $(function () {
         $('.mobile-menu').slideToggle();
     });
 
-    $('.mobile-menu li .sub-menu').prepend('<span  class="submenu-button"><i class="fa fa-angle-down" aria-hidden="true"></i><i class="fa fa-angle-up" aria-hidden="true"></i></span>');
+    $('.mobile-menu li .sub-menu').prepend('');
     $('.submenu-button').siblings().hide();
     $('.submenu-button').click(function () {
         $(this).siblings().slideToggle();

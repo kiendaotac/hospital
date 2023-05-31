@@ -20,6 +20,9 @@ class Customer extends Authenticatable
         'name',
         'phone',
         'email',
+        'dob',
+        'gender',
+        'address',
         'status',
         'password',
     ];
@@ -37,5 +40,10 @@ class Customer extends Authenticatable
     public function appointments(): HasMany
     {
         return $this->hasMany(Appointment::class, 'phone', 'phone');
+    }
+
+    public function appointment()
+    {
+        return $this->hasMany(Appointment::class, 'phone', 'phone')->latest()->first();
     }
 }

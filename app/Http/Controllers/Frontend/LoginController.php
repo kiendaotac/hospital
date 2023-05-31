@@ -9,6 +9,10 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    public function getLogin(Request $request)
+    {
+        return view('frontend.login');
+    }
     public function login(Request $request)
     {
         $request->validate([
@@ -16,7 +20,7 @@ class LoginController extends Controller
             'password' => 'required|string|min:6'
         ]);
         if (Auth::guard('customer')->attempt(array_merge($request->only(['phone', 'password']), ['status' => StatusEnum::ACTIVE->value]))) {
-            return redirect()->back();
+            return redirect()->route('frontend.lichsukham');
         }
         return redirect()->back()->withErrors([
             'loginError'=> 'Đăng nhập thất bại'

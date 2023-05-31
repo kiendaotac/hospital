@@ -64,7 +64,10 @@ class AppointmentResource extends Resource
                 Tables\Columns\TextColumn::make('phone'),
                 Tables\Columns\TextColumn::make('dob'),
                 Tables\Columns\TextColumn::make('email'),
-                Tables\Columns\TextColumn::make('gender'),
+                Tables\Columns\TextColumn::make('gender')->enum([
+                    0 => 'Nữ',
+                    1 => 'Nam'
+                ]),
                 Tables\Columns\TextColumn::make('address'),
                 Tables\Columns\TextColumn::make('note'),
                 Tables\Columns\TextColumn::make('time'),

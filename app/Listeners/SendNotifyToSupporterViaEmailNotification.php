@@ -8,7 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
 
-class SendNotifyAppointmentViaEmailNotification
+class SendNotifyToSupporterViaEmailNotification
 {
     /**
      * Create the event listener.
@@ -23,8 +23,9 @@ class SendNotifyAppointmentViaEmailNotification
      */
     public function handle(CustomerMakeAppointment $event): void
     {
-        $appointment = $event->appointment;
-        $customer    = $event->customer;
-        SendEmailNotification::dispatch($customer, new \App\Mail\CustomerMakeAppointment($appointment));
+        $appointment    = $event->appointment;
+        $supportEmail   = env('SUPPORTER_EMAIL');
+        $supportEmailCC = env('SUPPORTER_EMAIL_CC');
+        SendEmailNotification::dispatch([$supportEmail, $supportEmailCC], new \App\Mail\NotifySupporterNewCustomer($appointment));
     }
 }
