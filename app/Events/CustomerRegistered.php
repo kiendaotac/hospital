@@ -10,6 +10,7 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
 use Seshac\Otp\Otp;
 
 class CustomerRegistered
@@ -26,6 +27,7 @@ class CustomerRegistered
     {
         $this->customer = $customer;
         $this->otp      = Otp::generate($customer->email);
+        Log::info('send');
     }
 
     /**

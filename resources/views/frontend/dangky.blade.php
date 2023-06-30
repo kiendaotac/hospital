@@ -3,7 +3,7 @@
 <div class="register-wrap">
     <div class="register-form">
         <h3 class="register-form-title">Đặt lịch khám</h3>
-        <form action="{{route('dangky')}}" enctype="multipart/form-data" method="post" required>
+        <form id="submit" action="{{route('dangky')}}" enctype="multipart/form-data" method="post" required>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-register">
                 <div class="left-register">
@@ -91,14 +91,13 @@
                     </div>
                     <div class="form-group">
                         <label> Chọn dịch vụ khám</label>
-                        <select name="service">
-                            <option value="Gói khám sức khỏe phụ nữ tổng quát">Khám thai</option>
-                            <option value="Gói khám sức khỏe phụ nữ tổng quát">Siêu âm thai</option>
-                            <option value="Gói khám sức khỏe phụ nữ tổng quát">Gói khám sức khỏe phụ nữ tổng quát
-                            </option>
+                        <select name="service" required>
+                            <option value="">Lựa chọn dịch vụ</option>
+                            <option value="Khám thai">Khám thai</option>
+                            <option value="Siêu âm thai">Siêu âm thai</option>
+                            <option value="Gói khám sức khỏe phụ nữ tổng quát">Gói khám sức khỏe phụ nữ tổng quát</option>
                             <option value="Chăm sóc, tư vẫn trước sinh">Chăm sóc, tư vấn trước sinh</option>
-                            <option value="Khám và điều trị các bệnh phụ khoa">Khám và điều trị các bệnh phụ khoa
-                            </option>
+                            <option value="Khám và điều trị các bệnh phụ khoa">Khám và điều trị các bệnh phụ khoa</option>
                             <option value="Sàng lọc ung thư phụ khoa">Sàng lọc ung thư phụ khoa</option>
                         </select>
                     </div>
@@ -106,7 +105,7 @@
                 <div>
 </div>
 </div>
-                    <button type="submit">
+                    <button type="submit" id="btn-submit">
                         Đặt lịch ngay
                     </button>
         </form>
@@ -123,6 +122,10 @@ $(document).ready(function() {
         } else {
             $('.weekend').addClass('disable')
         }
+    })
+
+    $('form#submit').on('submit', function (e) {
+        $('#btn-submit').attr('disabled', true)
     })
 })
 </script>
