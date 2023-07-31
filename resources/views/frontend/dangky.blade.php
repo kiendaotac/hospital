@@ -73,7 +73,7 @@
                     <div class="form-group time">
                         <label> Chọn giờ khám</label>
                         @php
-                        $starTime = now()->setTime(8,0);
+                        $starTime = now()->setTime(7,0);
                         $endTime = now()->setTime(20, 30);
                         $index = 0;
                         @endphp
@@ -93,6 +93,7 @@
                         <select name="service" required>
                             <option value="">Lựa chọn dịch vụ</option>
                             <option value="Khám thai">Khám thai</option>
+                            <option value="Xét nghiệm">Xét nghiệm</option>
                             <option value="Siêu âm thai">Siêu âm thai</option>
                             <option value="Gói khám sức khỏe phụ nữ tổng quát">Gói khám sức khỏe phụ nữ tổng quát</option>
                             <option value="Chăm sóc, tư vẫn trước sinh">Chăm sóc, tư vấn trước sinh</option>
