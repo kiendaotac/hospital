@@ -68,8 +68,7 @@
                 <div class="right-register">
                     <div class="form-group">
                         <label for="date-appointment"> Chọn ngày khám</label>
-                        <input style="Width:100%" id="date-appointment" type="date"  name="date" min={{now()->format('Y-m-d')}}
-                            placeholder="Nhập Họ tên" required>
+                        <input style="Width:100%" id="date-appointment" type="date"  name="date" min='{{now()->format('Y-m-d')}}' placeholder="Nhập Họ tên" required />
                     </div>
                     <div class="form-group time">
                         <label> Chọn giờ khám</label>
@@ -83,7 +82,7 @@
                         <input type="radio" class="btn-check" id="option-{{ $index }}" name="options" autocomplete="off"
                             value="{{($starTime->format('H:i'))}}" required/>
                         <label
-                            class="btn btn-secondary {{ $starTime->lessThan(now()->setTime(16, 30)) ? 'weekend' : '' }}"
+                            class="btn btn-secondary {{ $starTime->lessThan(now()->setTime(16, 30)) ? 'weekend' : '' }} {{ $starTime->between(now()->setTime(11, 1), now()->setTime(15, 59)) ? 'weekend1' : '' }}"
                             for="option-{{ $index++ }}">{{($starTime->format('H:i'))}}</label>
                         @endif
                         @php($starTime->addMinutes(30))
@@ -119,6 +118,7 @@ $(document).ready(function() {
     $('#date-appointment').on('change', function() {
         if ((new Date($(this).val())).getDay() % 6 === 0) {
             $('.weekend').removeClass('disable')
+            $('.weekend1').addClass('disable')
         } else {
             $('.weekend').addClass('disable')
         }
