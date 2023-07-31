@@ -2762,4 +2762,8 @@ body.page-template-homepage-beta a.more{
 #lienquan a {
 	color: #00BB6D!important;
 	}
-	
+	.sidebar{
+	    position: sticky;
+    top: 88px;
+    right: 0;
+	}

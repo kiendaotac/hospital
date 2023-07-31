@@ -16,7 +16,7 @@
                         <span>{{Carbon\Carbon::parse($post->created_at)->format('d')}}</span>
                         <span>{{Carbon\Carbon::parse($post->created_at)->format('M')}}</span>
                     </div>
-                    <img src="{{$post->banner_url}}">
+                    <img src="{{$post->banner_url}}"  alt="{{$post->title}}">
                 </a>
                 <h4><strong><a
                             href="{{route('post',$post->slug)}}">

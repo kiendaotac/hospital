@@ -11,6 +11,7 @@
         @foreach($blogs as $post)
 
         <div class="col-md-4 post-item">
+
             <div class="normal-post"> <a href="{{route('post',$post->slug)}}">
             <div class="date">
                         <span>{{Carbon\Carbon::parse($post->created_at)->format('d')}}</span>

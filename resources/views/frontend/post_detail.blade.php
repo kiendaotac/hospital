@@ -1,7 +1,7 @@
 @extends('frontend.layout.layout')
 @section('content')
 <div class="page-banner"> <img
-        src="{{asset("assets/images/banner.png")}}"
+        src="{{asset("assets/images/banner.png")}}" alt="banner"
         class="w-100"></div>
     <div class="breadcumb">
       <div class="container"></div>

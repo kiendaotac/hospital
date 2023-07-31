@@ -15,7 +15,9 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "ryangjchandler/filament-profile": "^0.3.0",
-        "seshac/otp-generator": "^0.0.7"
+        "sentry/sentry-laravel": "^3.4",
+        "seshac/otp-generator": "^0.0.7",
+        "spatie/laravel-sitemap": "^6.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",

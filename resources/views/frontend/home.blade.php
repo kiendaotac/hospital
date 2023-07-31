@@ -40,9 +40,9 @@
                             X
                         </button>
                         <div class="modal-body">
-                            <h2 class="modal-title b700">
+                            <h3 class="modal-title b700">
                                 Giờ làm việc
-                            </h2>
+                            </h3>
                             <p>
                                 Với mong muốn mang lại cho quý khách hàng các dịch vụ y tế chất lượng
                                 cao, phục vụ kịp thời nhất, Phụ sản Tina áp dụng giờ làm việc như
@@ -87,9 +87,9 @@
                             X
                         </button>
                         <div class="modal-body">
-                            <h2 class="modal-title b700">
+                            <h3 class="modal-title b700">
                                 Đăng ký lịch khám
-                            </h2>
+                            </h3>
                             <div class="appointment-form-popup">
                                 <form action="{{route('nhaptelephone')}}">
                                     <div class="form-group">
@@ -121,9 +121,9 @@
                             X
                         </button>
                         <div class="modal-body">
-                            <h2 class="modal-title b700">
+                            <h3 class="modal-title b700">
                                 Hệ thống Phụ sản Tina
-                            </h2>
+                            </h3>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="item-add d-flex">
@@ -269,9 +269,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="fs28 b700 text-white text-uppercase mb-5">
+                <h4 class="fs28 b700 text-white text-uppercase mb-5">
                     Số Liệu nổi bật
-                </h2>
+                </h4>
                 <div class="blog-1">
                     <div class="d1 d-flex aic">
                         <div class="d-flex" style="margin-left: 35px;">

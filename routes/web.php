@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Frontend\HomeController;
 use Illuminate\Support\Facades\Route;
+use Spatie\Sitemap\SitemapGenerator;
+use Psr\Http\Message\UriInterface;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,4 +45,18 @@ Route::get('test', function () {
 
 Route::fallback(function() {
     abort(404, 'Đường dẫn bạn nhập không tồn tại. Vui lòng kiểm tra lại');
+});
+Route::get('testxml', function () {
+    // SitemapGenerator::create('https://phusantina.vn')->writeToFile('sitemap.xml');
+  SitemapGenerator::create('https://phusantina.vn')
+   ->shouldCrawl(function (UriInterface $url) {
+       // All pages will be crawled, except the contact page.
+       // Links present on the contact page won't be added to the
+       // sitemap unless they are present on a crawlable page.
+       
+       return strpos($url->getPath(), '/storage') === false;
+   })
+   ->writeToFile('sitemap.xml');
+    return('stiemap created');
+
 });

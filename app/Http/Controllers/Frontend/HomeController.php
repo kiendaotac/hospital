@@ -74,16 +74,17 @@ class HomeController extends Controller
     }
     public function post($slug){
         $posts = Post::published()->latest()->take(10)->get();
-        $post = Post::where('slug',$slug)->first();
+        $post = Post::where('slug',$slug)->firstOrFail(); 
         return view('frontend.post_detail', array(
             'title' =>$post->title,
             'description' =>$post->excerpt,
             'post'     => $post,
-            'posts'     => $posts
+            'posts'     => $posts,
+            'keywords' => $post->tag
         ));
     }
     public function getCategory($slug){
-        $category= Category::where('slug', $slug)->first();
+        $category= Category::where('slug', $slug)->firstOrFail(); 
         $blogs = Post::where('blog_category_id',$category->id)->get();
         return view('frontend.blog_category', array(
             'category'     => $category,

@@ -13,21 +13,10 @@
         <div class="row">
           <div class="col-md-12">
             <div class="dichvu-item">
-                <h4 class="fs18 b600">Khám bệnh</h4>
-                <img class="normal" src="{{asset("assets/images/dich-vu-kham-benh.png")}}">
-            </div>
-            <div class="dichvu-item">
-                <h4 class="fs18 b600">Cận lâm sàng</h4>
-                <img class="normal" src="{{asset("assets/images/can-lam-sang.png")}}">
-                <img class="normal" src="{{asset("assets/images/can-lam-sang-2.png")}}">
-            </div>
-            <div class="dichvu-item">
-                <h4 class="fs18 b600">Điều trị</h4>
-                <img class="normal" src="{{asset("assets/images/dieu-tri.png")}}">
-            </div>
-            <div class="dichvu-item">
-                <h4 class="fs18 b600">Gói đăng ký</h4>
-                <img class="normal" src="{{asset("assets/images/dich-vu-thanh-vien.png")}}">
+                <img class="normal" src="{{asset("assets/images/dichvu-001.jpg")}}" alt="dichvu-001">
+                <img class="normal" src="{{asset("assets/images/dichvu-002.jpg")}}" alt="dichvu-002">
+                <img class="normal" src="{{asset("assets/images/dichvu-003.jpg")}}" alt="dichvu-003">
+                <img class="normal" src="{{asset("assets/images/dichvu-004.jpg")}}" alt="dichvu-004">
             </div>
           </div>
         </div>

@@ -24,8 +24,7 @@ class SendNotifyToSupporterViaEmailNotification
     public function handle(CustomerMakeAppointment $event): void
     {
         $appointment    = $event->appointment;
-        $supportEmail   = env('SUPPORTER_EMAIL');
-        $supportEmailCC = env('SUPPORTER_EMAIL_CC');
-        SendEmailNotification::dispatch([$supportEmail, $supportEmailCC], new \App\Mail\NotifySupporterNewCustomer($appointment));
+        $supporterEmails = ['pktina738@gmail.com', 'Tranthiyenoanh3009@gmail.com', 'Phan.thuy120494@gmail.com'];
+        SendEmailNotification::dispatch($supporterEmails, new \App\Mail\NotifySupporterNewCustomer($appointment));
     }
 }

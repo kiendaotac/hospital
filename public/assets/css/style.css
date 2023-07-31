@@ -4588,3 +4588,8 @@ max-width: 300px;
 	margin-top: 0;
 	color: #ee4668;
 }
+.sidebar{
+	position: sticky;
+    top: 88px;
+    right: 0;
+}

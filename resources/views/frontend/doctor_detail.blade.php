@@ -13,7 +13,7 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-md-4"> <img
-                            src="{{asset('storage/'.$doctor->avatar)}}">
+                            src="{{asset('storage/'.$doctor->avatar)}}" alt="{{$doctor->name}}">
                         <!-- <div class="text-center"> <button class="more" data-toggle="modal"
                                 data-target="#exampleModal5">Đặt lịch
                                 hẹn khám</button></div>
